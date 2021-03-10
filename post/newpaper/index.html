@@ -26,21 +26,21 @@
 
   
   <meta name="author" content="Kai Zheng">
-  <meta name="description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 ">
+  <meta name="description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 [tool:pytest] addopts = --verbose &#43; --isort &#43; --yapf  ... isort_ignore = setup.py [isort] ... [yapf] ... ">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@twitter_username">
     <meta name="twitter:title" content="诗">
-    <meta name="twitter:description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 ">
+    <meta name="twitter:description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 [tool:pytest] addopts = --verbose &#43; --isort &#43; --yapf  ... isort_ignore = setup.py [isort] ... [yapf] ... ">
     <meta name="twitter:image" content="/images/avatar.png">
   
 
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="诗">
-  <meta property="og:description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 ">
+  <meta property="og:description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 [tool:pytest] addopts = --verbose &#43; --isort &#43; --yapf  ... isort_ignore = setup.py [isort] ... [yapf] ... ">
   <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/">
   <meta property="og:image" content="/images/avatar.png">
 
@@ -239,8 +239,19 @@
     </header>
     <article class="post-content"><p>轻轻的你走了，真如我悄悄的更在后面，保护你的安全。
 <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180905%2Fa5ef114ce38247b1ad401b16c7fb0001.jpeg&amp;refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1617962740&amp;t=fd2ac5cf23aca07fcf659b4c860ed065" alt="avatar"></p>
-<!-- raw HTML omitted -->
-</article>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">  [tool:pytest]
+  addopts = --verbose
+<span style="color:#a6e22e">+           --isort
+</span><span style="color:#a6e22e">+           --yapf
+</span><span style="color:#a6e22e"></span>            ...
+  isort_ignore = setup.py
+
+  [isort]
+  ...
+
+  [yapf]
+  ...
+</code></pre></div></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
