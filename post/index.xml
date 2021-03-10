@@ -9,18 +9,7 @@
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Wed, 10 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sky</title>
-      <link>https://zhengkai15.github.io/zhengkai.github.io/post/about/hello-world2/</link>
-      <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
-      
-      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/about/hello-world2/</guid>
-      <description>&lt;p&gt;新的GPU服务器环境配置&amp;ndash;Ubuntu18.04+CUDA10.0+cuDNN7.6.5+TensorFlow2.0安装笔记
-@QI ZHANG · DEC 30, 2019 · 7 MIN READ&lt;/p&gt;
-&lt;p&gt;第一次安装CUDA的过程简直抓狂，中间出现了很多次莫名其妙的bug，踩了很多坑。比如装好了CUDA重启后进不去桌面系统了，直接黑屏、比如鼠标键盘都不work了、再比如装好了却安装不了TensorFlow-GPU……看了一圈网上的安装教程，发现还是官方指南真香了~ 新年第一篇，分享一下我的Ubuntu 18.04 + CUDA 10.0 + cuDNN 7.6.5 + TensorFlow 2.0 安装笔记，希望可以帮助大家少踩坑。 整个安装流程大致是：安装显卡驱动 -&amp;gt; 安装CUDA -&amp;gt; 安装cuDNN -&amp;gt; 安装tensorflow-gpu并测试。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sky</title>
+      <title>Sky1</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/hello-world/</link>
       <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
       
@@ -31,11 +20,22 @@
     </item>
     
     <item>
-      <title>Sky</title>
+      <title>Sky2</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/hello-world1/</link>
       <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/hello-world1/</guid>
+      <description>&lt;p&gt;新的GPU服务器环境配置&amp;ndash;Ubuntu18.04+CUDA10.0+cuDNN7.6.5+TensorFlow2.0安装笔记
+@QI ZHANG · DEC 30, 2019 · 7 MIN READ&lt;/p&gt;
+&lt;p&gt;第一次安装CUDA的过程简直抓狂，中间出现了很多次莫名其妙的bug，踩了很多坑。比如装好了CUDA重启后进不去桌面系统了，直接黑屏、比如鼠标键盘都不work了、再比如装好了却安装不了TensorFlow-GPU……看了一圈网上的安装教程，发现还是官方指南真香了~ 新年第一篇，分享一下我的Ubuntu 18.04 + CUDA 10.0 + cuDNN 7.6.5 + TensorFlow 2.0 安装笔记，希望可以帮助大家少踩坑。 整个安装流程大致是：安装显卡驱动 -&amp;gt; 安装CUDA -&amp;gt; 安装cuDNN -&amp;gt; 安装tensorflow-gpu并测试。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sky3</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/about/hello-world2/</link>
+      <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/about/hello-world2/</guid>
       <description>&lt;p&gt;新的GPU服务器环境配置&amp;ndash;Ubuntu18.04+CUDA10.0+cuDNN7.6.5+TensorFlow2.0安装笔记
 @QI ZHANG · DEC 30, 2019 · 7 MIN READ&lt;/p&gt;
 &lt;p&gt;第一次安装CUDA的过程简直抓狂，中间出现了很多次莫名其妙的bug，踩了很多坑。比如装好了CUDA重启后进不去桌面系统了，直接黑屏、比如鼠标键盘都不work了、再比如装好了却安装不了TensorFlow-GPU……看了一圈网上的安装教程，发现还是官方指南真香了~ 新年第一篇，分享一下我的Ubuntu 18.04 + CUDA 10.0 + cuDNN 7.6.5 + TensorFlow 2.0 安装笔记，希望可以帮助大家少踩坑。 整个安装流程大致是：安装显卡驱动 -&amp;gt; 安装CUDA -&amp;gt; 安装cuDNN -&amp;gt; 安装tensorflow-gpu并测试。&lt;/p&gt;</description>
