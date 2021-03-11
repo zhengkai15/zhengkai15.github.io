@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI on Kai Zheng</title>
+    <title>AI on My blog is awesome</title>
     <link>https://zhengkai15.github.io/zhengkai.github.io/tags/ai/</link>
-    <description>Recent content in AI on Kai Zheng</description>
+    <description>Recent content in AI on My blog is awesome</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <language>fr-FR</language>
+    <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 10 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install</title>

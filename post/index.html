@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-FR">
 <head>
 
     <meta charset="utf-8" />
@@ -8,32 +8,36 @@
     
     <meta name="twitter:card" content="summary"/>
     
+    <meta name="twitter:image" content="/images/cover.jpg"/>
+    
 
 
 
 <meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."/>
-<meta name="twitter:site" content="@"/>
+<meta name="twitter:description" content="this is my description"/>
+<meta name="twitter:site" content="@vjeantet"/>
 
 
 
-  	<meta property="og:title" content="Posts &middot; Kai Zheng" />
-  	<meta property="og:site_name" content="Kai Zheng" />
+  	<meta property="og:title" content="Posts &middot; My blog is awesome" />
+  	<meta property="og:site_name" content="My blog is awesome" />
   	<meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/post/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
         
     
 
     
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." />
+    <meta property="og:description" content="this is my description" />
     
 
-    <title>Posts &middot; Kai Zheng</title>
+    <title>Posts &middot; My blog is awesome</title>
 
     
-    <meta name="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." />
+    <meta name="description" content="this is my description" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -50,12 +54,7 @@
     
 
     
-      
-          <link href="https://zhengkai15.github.io/zhengkai.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Kai Zheng" />
-      
-      
-        <link href="https://zhengkai15.github.io/zhengkai.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Kai Zheng" />
-      
+        <link href="http://feeds.feedburner.com/..." rel="alternate" type="application/rss+xml" title="My blog is awesome" />
     
     <meta name="generator" content="Hugo 0.81.0" />
 
@@ -72,12 +71,19 @@
         "@type": "Person",
         "name":  null ,
         
-        "url":  null ,
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://zhengkai15.github.io/zhengkai.github.io/images/logo.png",
+            "width": 250,
+            "height": 250
+        },
+        
+        "url": "http://vjeantet.fr",
         "sameAs": [
             
             
              
-             "zhengkai15",
+             
              
              
              
@@ -89,7 +95,7 @@
         "@type": "WebPage",
         "@id": "https://zhengkai15.github.io/zhengkai.github.io/"
     },
-    "description": "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
+    "description": "this is my description"
 }
   </script>
     
@@ -97,6 +103,17 @@
 
     
 
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-79101-12', 'auto');
+      ga('send', 'pageview');
+
+    </script>
     
 
     
@@ -124,21 +141,6 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://zhengkai15.github.io/zhengkai.github.io/tags/">Tags</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-            	<a href="https://github.com/zhengkai15">Works</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-            	<a href="https://zhengkai15.github.io/zhengkai.github.io/">Home</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
             	<a href="https://zhengkai15.github.io/zhengkai.github.io/post/links/">Links</a>
             </li>
         
@@ -146,7 +148,7 @@
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://zhengkai15.github.io/zhengkai.github.io/post/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="http://feeds.feedburner.com/...">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -157,9 +159,13 @@
 
 
 
-	<header class="main-header tag-head no-cover">
+	 
+  <header class="main-header tag-head" style="background-image: url(/images/cover.jpg)">
+  
 
     <nav class="main-nav overlay clearfix">
+      
+        <a class="blog-logo" href="https://zhengkai15.github.io/zhengkai.github.io/"><img src="https://zhengkai15.github.io/zhengkai.github.io/images/logo.png" alt="Home" /></a>
       
       
           <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
@@ -181,7 +187,9 @@
 	<div class="extra-pagination inner">
     <nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 1</span>
+	<span class="page-number">Page 1 of 2</span>
+	
+	    <a class="older-posts" href="https://zhengkai15.github.io/zhengkai.github.io/post/page/2/">Older Posts &rarr;</a>
 	
 </nav>
 
@@ -205,9 +213,11 @@
             
 
             
+            <img class="author-thumb" src="https://zhengkai15.github.io/zhengkai.github.io/images/logo.png" alt="Author image" nopin="nopin" />
             
             
-            Kai Zheng
+            
+            Valère JEANTET
                  
         
 
@@ -236,9 +246,11 @@
             
 
             
+            <img class="author-thumb" src="https://zhengkai15.github.io/zhengkai.github.io/images/logo.png" alt="Author image" nopin="nopin" />
             
             
-            Kai Zheng
+            
+            Valère JEANTET
                  
         
 
@@ -266,6 +278,8 @@
             
             
 
+            
+            <img class="author-thumb" src="https://zhengkai15.github.io/zhengkai.github.io/images/logo.png" alt="Author image" nopin="nopin" />
             
             
             
@@ -304,6 +318,8 @@
             
 
             
+            <img class="author-thumb" src="https://zhengkai15.github.io/zhengkai.github.io/images/logo.png" alt="Author image" nopin="nopin" />
+            
             
             
             Kai Zheng
@@ -339,6 +355,8 @@
             
 
             
+            <img class="author-thumb" src="https://zhengkai15.github.io/zhengkai.github.io/images/logo.png" alt="Author image" nopin="nopin" />
+            
             
             
             Kai Zheng
@@ -357,143 +375,12 @@
 </article>
 
 	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/macprobrome/">升级后的系统是macOS 10.15 (Catalina) ，安装cartopy</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>报错内容：No such file or directory “limits.h” csrutil disable # 需要在恢复模式下运行命令，具体请自行搜索。 $ xcode-select --install # 安装常用开发工具，如：git等。 $ sudo mount -uw / # 根目录挂载为可读写，否则无法在/usr/下建立文件，本修改重启前有效。 $ sudo ln -s &#34;$(xcrun --show-sdk-path)/usr/include&#34; /usr/include $ export SDKROOT=&#34;$(xcrun --show-sdk-path)&#34; # 设置环境变量 $ echo &#34;export SDKROOT=\&#34;\$(xcrun --show-sdk-path)\&#34;&#34; &gt;&gt; ~/.bash_profile # zsh的自行搞定 $ sudo DevToolsSecurity -enable # 将系统置于开发模式 Reference：https://zhile.io/2018/09/26/macOS-10.14-install-sdk-headers.html <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/macprobrome/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-            
-            
-
-            
-            
-            
-            Kai Zheng
-                 
-        
-
-        on
-            
-                <a href="https://zhengkai15.github.io/zhengkai.github.io//tags/cartopy/">#Cartopy</a>,
-            
-        
-        <time class="post-date" datetime="2021-03-10T11:15:31&#43;08:00">
-            10 Mar 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/">爬取matplotlib官网所有例子</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>爬取matplotlib官网所有例子
-from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait import os import urllib.request,re import requests PATH=lambda p:os.path.abspath(os.path.join( os.path.dirname(__file__), p)) class downMatplotlibDemo(): def __init__(self): self.urlList=self.getUrlList() self.driver=webdriver.Chrome() self.driver.maximize_window() self.GetDemoDownload() self.driver.close() def getUrlList(self): # try: url=&#34;http://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots&#34; matutl=&#34;http://matplotlib.org/devdocs/gallery/&#34; pageContent=urllib.request.urlopen(url).read().decode(&#39;utf-8&#39;) if pageContent: linkList=re.findall(&#39;class=&#34;reference internal&#34; href=&#34;../../gallery/(.*?)&#34;&gt;&lt;span class=&#34;std std-ref&#34;&gt;(.*?)&lt;/span&gt;&lt;/a&gt;&#39;, pageContent, re.S) charList=[matutl+var[0] for var in linkList if len(linkList)&gt;0] return charList # except Exception: # print (&#34;Create UrlList Error:&#34;) #,e def GetDemoDownload(self): count=0 for url in self.urlList: self.driver.get(url) js=&#34;var q=document. <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-            
-            
-
-            
-            
-            
-            Kai Zheng
-                 
-        
-
-        on
-            
-                <a href="https://zhengkai15.github.io/zhengkai.github.io//tags/webdriver/">#webdriver</a>,
-            
-        
-        <time class="post-date" datetime="2021-03-10T11:15:31&#43;08:00">
-            10 Mar 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/links/">Links</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p> <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/links/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-            
-            
-
-            
-            
-            
-            Kai Zheng
-                 
-        
-
-        
-        <time class="post-date" datetime="2010-03-10T13:36:55&#43;08:00">
-            10 Mar 2010
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/readme/"></a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>md  <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/readme/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-            
-            
-
-            
-            
-            
-            Kai Zheng
-                 
-        
-
-        
-        <time class="post-date" datetime="0001-01-01T00:00:00Z">
-            1 Jan 0001
-        </time>
-    </footer>
-</article>
-
-	
 
 	<nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 1</span>
+	<span class="page-number">Page 1 of 2</span>
+	
+	    <a class="older-posts" href="https://zhengkai15.github.io/zhengkai.github.io/post/page/2/">Older Posts &rarr;</a>
 	
 </nav>
 
@@ -502,7 +389,7 @@ from selenium import webdriver from selenium.webdriver.support.ui import WebDriv
 
 
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Kai Zheng</a> © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</section>
+        <section class="copyright"><a href="">My blog is awesome</a> All rights reserved - 2015</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         
