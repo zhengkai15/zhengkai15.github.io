@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>网站正在建立 内容如有雷同马上撤回</title>
+  <title>Loss</title>
 
   
   
@@ -26,22 +26,25 @@
 
   
   <meta name="author" content="Kai Zheng">
-  <meta name="description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 brew install hugo # 安装hugo，其他平台类似，参考：&amp;lt;https://gohugo.io/getting-started/installing/&amp;gt; hugo version # 测试是否安装成功 hugo new site myblog # 创建一个新站点myblog，会新建一个文件夹myblog，并在该文件夹中生成基础的网页配置模块。 &amp;#34;&amp;#34;&amp;#34; . ├── archetypes ├── assets ├── config ├── content ├── data ├── layouts ├── static └── themes &amp;#34;&amp;#34;&amp;#34; ">
+  <meta name="description" content="在LightGBM和XGBoost中的自定义损失函数（Custom Loss Function）。
+">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@gohugoio">
-    <meta name="twitter:title" content="网站正在建立 内容如有雷同马上撤回">
-    <meta name="twitter:description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 brew install hugo # 安装hugo，其他平台类似，参考：&amp;lt;https://gohugo.io/getting-started/installing/&amp;gt; hugo version # 测试是否安装成功 hugo new site myblog # 创建一个新站点myblog，会新建一个文件夹myblog，并在该文件夹中生成基础的网页配置模块。 &amp;#34;&amp;#34;&amp;#34; . ├── archetypes ├── assets ├── config ├── content ├── data ├── layouts ├── static └── themes &amp;#34;&amp;#34;&amp;#34; ">
+    <meta name="twitter:title" content="Loss">
+    <meta name="twitter:description" content="在LightGBM和XGBoost中的自定义损失函数（Custom Loss Function）。
+">
     <meta name="twitter:image" content="/images/avatar.png">
   
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="网站正在建立 内容如有雷同马上撤回">
-  <meta property="og:description" content="轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 brew install hugo # 安装hugo，其他平台类似，参考：&amp;lt;https://gohugo.io/getting-started/installing/&amp;gt; hugo version # 测试是否安装成功 hugo new site myblog # 创建一个新站点myblog，会新建一个文件夹myblog，并在该文件夹中生成基础的网页配置模块。 &amp;#34;&amp;#34;&amp;#34; . ├── archetypes ├── assets ├── config ├── content ├── data ├── layouts ├── static └── themes &amp;#34;&amp;#34;&amp;#34; ">
-  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/">
+  <meta property="og:title" content="Loss">
+  <meta property="og:description" content="在LightGBM和XGBoost中的自定义损失函数（Custom Loss Function）。
+">
+  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/post/selflossfunc/">
   <meta property="og:image" content="/images/avatar.png">
 
 
@@ -50,7 +53,7 @@
 <meta name="generator" content="Hugo 0.81.0">
 
 
-<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/">
+<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/post/selflossfunc/">
 
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -218,34 +221,41 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">网站正在建立 内容如有雷同马上撤回</h1>
-      <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
+      <h1 class="post-title">Loss</h1>
+      <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 2 min read</p>
     </header>
-    <article class="post-content"><p>轻轻的你走了，真如我悄悄的更在后面，保护你的安全。
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180905%2Fa5ef114ce38247b1ad401b16c7fb0001.jpeg&amp;refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1617962740&amp;t=fd2ac5cf23aca07fcf659b4c860ed065" alt="avatar"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">brew install hugo # 安装hugo，其他平台类似，参考：&lt;https://gohugo.io/getting-started/installing/&gt;
-
-hugo version # 测试是否安装成功
-
-hugo new site myblog # 创建一个新站点myblog，会新建一个文件夹myblog，并在该文件夹中生成基础的网页配置模块。
-
-&#34;&#34;&#34;
-.
-├── archetypes
-├── assets
-├── config
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-&#34;&#34;&#34;
-</code></pre></div></article>
+    <article class="post-content"><p>在LightGBM和XGBoost中的自定义损失函数（Custom Loss Function）。</p>
+<p>Training loss and Validation loss
+Training loss: This is the function that is optimized on the training data. For example, in a neural network binary classifier, this is usually the binary cross entropy. For the random forest classifier, this is the Gini impurity. The training loss is often called the “objective function” as well. The training loss in LightGBM is called objective.</p>
+<p>Validation loss: This is the function that we use to evaluate the performance of our trained model on unseen data. This is often not the same as the training loss. For example, in the case of a classifier, this is often the area under the curve of the receiver operating characteristic (ROC) — though this is never directly optimized, because it is not differentiable. This is often called the “performance or evaluation metric”. The validation loss is often used to tune hyper-parameters. It is often easier to customize, as it doesn’t have as many functional requirements like the training loss does. The validation loss can be non-convex, non-differentiable, and discontinuous. The validation loss in LightGBM is called metric.</p>
+<p>我们可以用Validation loss做early stopping：当迭代次数（boosting rounds，树的数量）增加的时候，loss经过early_stopping_rounds不减小，则停止训练。</p>
+<p>但是如果Validation loss function是二阶可导的，则可以考虑直接用其作为Training loss直接优化模型。</p>
+<p>Training loss: Customizing the training loss in LightGBM requires defining a function that takes in two arrays, the targets and their predictions. In turn, the function should return two arrays of the gradient and hessian of each observation. As noted above, we need to use calculus to derive gradient and hessian and then implement it in Python.</p>
+<p>Validation loss: Customizing the validation loss in LightGBM requires defining a function that takes in the same two arrays, but returns three values: a string with name of metric to print, the loss itself, and a boolean about whether higher is better.</p>
+<p>官方例子-LGBM中自定义log likelihood loss：</p>
+<h1 id="self-defined-objective-function">self-defined objective function</h1>
+<h1 id="fpreds-array-train_data-dataset---grad-array-hess-array">f(preds: array, train_data: Dataset) -&gt; grad: array, hess: array</h1>
+<h1 id="log-likelihood-loss">log likelihood loss</h1>
+<p>def loglikelihood(preds, train_data):
+labels = train_data.get_label()
+preds = 1. / (1. + np.exp(-preds))
+grad = preds - labels
+hess = preds * (1. - preds)
+return grad, hess</p>
+<h1 id="self-defined-eval-metric">self-defined eval metric</h1>
+<h1 id="fpreds-array-train_data-dataset---name-string-eval_result-float-is_higher_better-bool">f(preds: array, train_data: Dataset) -&gt; name: string, eval_result: float, is_higher_better: bool</h1>
+<h1 id="binary-error">binary error</h1>
+<p>def binary_error(preds, train_data):
+labels = train_data.get_label()
+return &lsquo;error&rsquo;, np.mean(labels != (preds &gt; 0.5)), False
+实例
+（1）自定义MSE
+考虑这样一种场景，我们赶车赶飞机，预测我们的出发时间，使得我们等候时间最少。对于早到和晚到，惩罚是不一样的，早到机场火车站，无可厚非。但是要是晚到，就麻烦了… 所以显而易见，我们在建模时候需要加大迟到的惩罚。如下customMSE公式，对于迟到我们加大10倍的惩罚。</p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
         
-          <li><a href="https://zhengkai15.github.io/zhengkai.github.io/tags/poem"><span class="tag">Poem</span></a></li>
+          <li><a href="https://zhengkai15.github.io/zhengkai.github.io/tags/loss"><span class="tag">Loss</span></a></li>
         
       </ul>
       
