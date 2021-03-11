@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>本站 Hugo 主题 Nuo 正式上线！</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  <link href="///disqus.com" rel="dns-prefetch">
+  <link href="//c.disquscdn.com" rel="dns-prefetch">
+  
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  
+
+  
+
+  
+  <meta name="author" content="米老朱">
+  <meta name="description" content="经过博主近两周的折腾，本站主题 hugo-nuo 终于在 Hugo 官方主题仓库上线咯，欢迎下载体验和反馈意见。这个主题适合于个人博客用户，包含：首页、文章页、作品（开发中）、友链和关于五个主要页面，支持 搜狐畅言 和 Disqus 评论系统，集成了大量 Hugo Shortcodes 以方便引入第三方资源。主题构建依赖 node / rollup / sass 开发环境，你可以参照官方 README 搭建环境进行二次开发。
+">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="本站 Hugo 主题 Nuo 正式上线！">
+    <meta name="twitter:description" content="经过博主近两周的折腾，本站主题 hugo-nuo 终于在 Hugo 官方主题仓库上线咯，欢迎下载体验和反馈意见。这个主题适合于个人博客用户，包含：首页、文章页、作品（开发中）、友链和关于五个主要页面，支持 搜狐畅言 和 Disqus 评论系统，集成了大量 Hugo Shortcodes 以方便引入第三方资源。主题构建依赖 node / rollup / sass 开发环境，你可以参照官方 README 搭建环境进行二次开发。
+">
+    <meta name="twitter:image" content="/images/avatar.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="本站 Hugo 主题 Nuo 正式上线！">
+  <meta property="og:description" content="经过博主近两周的折腾，本站主题 hugo-nuo 终于在 Hugo 官方主题仓库上线咯，欢迎下载体验和反馈意见。这个主题适合于个人博客用户，包含：首页、文章页、作品（开发中）、友链和关于五个主要页面，支持 搜狐畅言 和 Disqus 评论系统，集成了大量 Hugo Shortcodes 以方便引入第三方资源。主题构建依赖 node / rollup / sass 开发环境，你可以参照官方 README 搭建环境进行二次开发。
+">
+  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/post/hugo-nuo-theme/">
+  <meta property="og:image" content="/images/avatar.png">
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0">
+
+
+<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/post/hugo-nuo-theme/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="google-site-verification" content="_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc">
+<meta name="msvalidate.01" content="22596E34341DD1D17D6022C44647E587">
+
+
+
+
+
+<meta name="theme-color" content="#02b875">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Kai Zheng">
+<meta name="msapplication-tooltip" content="Kai Zheng">
+<meta name='msapplication-navbutton-color' content="#02b875">
+<meta name="msapplication-TileColor" content="#02b875">
+<meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+<link rel="icon" href="https://zhengkai15.github.io/zhengkai.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zhengkai15.github.io/zhengkai.github.io/icons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zhengkai15.github.io/zhengkai.github.io/icons/icon-32x32.png">
+<link rel="icon" sizes="192x192" href="https://zhengkai15.github.io/zhengkai.github.io/icons/icon-192x192.png">
+<link rel="apple-touch-icon" href="https://zhengkai15.github.io/zhengkai.github.io/icons/icon-152x152.png">
+<link rel="manifest" href="https://zhengkai15.github.io/zhengkai.github.io/manifest.json">
+
+
+<link rel="preload" href="https://zhengkai15.github.io/zhengkai.github.io/styles/main-rendered.min.css" as="style">
+
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="https://zhengkai15.github.io/zhengkai.github.io/images/avatar.png" as="image">
+<link rel="preload" href="https://zhengkai15.github.io/zhengkai.github.io/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="https://zhengkai15.github.io/zhengkai.github.io/styles/main-rendered.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+</head>
+  <body>
+    <div class="suspension">
+      <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+	<a role="button" aria-label="Go to comments" title="Go to comments" class="to-comment" href="#disqus_thread"><span class="icon icon-comment" aria-hidden="true"></span></a>
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <a href="https://zhengkai15.github.io/zhengkai.github.io/"><img class="avatar" src="https://zhengkai15.github.io/zhengkai.github.io/images/avatar.png" alt="Avatar"></a>
+  
+  <h2 class="title"><a href="https://zhengkai15.github.io/zhengkai.github.io/">Kai Zheng</a></h2>
+  
+  <p class="subtitle">Let it be,just enjoy the moment,your life would be better.</p>
+  <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
+    <span class="icon icon-menu" aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+          
+          
+           is-active">
+          <a href="https://zhengkai15.github.io/zhengkai.github.io/">Home</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://github.com/zhengkai15">Works</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/">Tags</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://zhengkai15.github.io/zhengkai.github.io/post/about/">About</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://zhengkai15.github.io/zhengkai.github.io/post/resume/">Resume</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://zhengkai15.github.io/zhengkai.github.io/post/links/">Links</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"><li class="social-item">
+          <a href="mailto:156252108@qq.com" title="Email" aria-label="Email">
+            <span class="icon icon-email" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//github.com/zhengkai15" rel="me" title="GitHub" aria-label="GitHub">
+	    <span class="icon icon-github" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//www.youtube.com/user/zhengzhengkaikai" rel="me" title="YouTube" aria-label="YouTube">
+            <span class="icon icon-youtube" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="https://zhengkai15.github.io/zhengkai.github.io/images/qrcode.png" rel="me" title="Wechat" aria-label="Wechat">
+            <span class="icon icon-wechat" aria-hidden="true"></span>
+          </a>
+        </li></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">本站 Hugo 主题 Nuo 正式上线！</h1>
+      <p class="post-meta">@米老朱 · Aug 4, 2017 · 2 min read</p>
+    </header>
+    <article class="post-content"><p>经过博主近两周的折腾，本站主题 <a href="https://themes.gohugo.io/theme/hugo-nuo/">hugo-nuo</a> 终于在 Hugo 官方主题仓库上线咯，欢迎下载体验和反馈意见。这个主题适合于个人博客用户，包含：首页、文章页、作品（开发中）、友链和关于五个主要页面，支持 <a href="http://changyan.kuaizhan.com/">搜狐畅言</a> 和 <a href="https://disqus.com/">Disqus</a> 评论系统，集成了大量 <a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a> 以方便引入第三方资源。主题构建依赖 <code>node</code> / <code>rollup</code> / <code>sass</code> 开发环境，你可以参照官方 <a href="https://github.com/laozhu/hugo-nuo#build">README</a> 搭建环境进行二次开发。</p>
+<h2 id="截图">截图</h2>
+<p>无图无真相，你可以直接访问 <a href="https://laozhu.me">laozhu.me</a> 查看主题模样，博主也准备了桌面和手机的高清无码截图，可以先感觉下。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>整个主题是响应式的，可以根据浏览器的宽度和高度自动改变布局。</p>
+<h2 id="特性">特性</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 全站采用响应式页面布局</li>
+<li><input checked="" disabled="" type="checkbox"> 一个可自行定制的主菜单</li>
+<li><input checked="" disabled="" type="checkbox"> 文章列表页支持有封面和无封面两种布局</li>
+<li><input checked="" disabled="" type="checkbox"> 提供一个漂亮的友情链接页面布局</li>
+<li><input checked="" disabled="" type="checkbox"> 支持 21 个社交网站账号和图标</li>
+<li><input checked="" disabled="" type="checkbox"> 支持百度统计和 Google 分析工具快速集成</li>
+<li><input checked="" disabled="" type="checkbox"> 支持主流搜索引擎站长工具的网站快速验证</li>
+<li><input checked="" disabled="" type="checkbox"> 支持搜狐畅言和 Disqus 评论系统（二选一）</li>
+<li><input checked="" disabled="" type="checkbox"> 大量第三方 shortcodes 支持（如：<del>网易云音乐</del>）</li>
+</ul>
+<p>详细的特性可以查看主题的 GitHub 代码仓库 → <a href="https://github.com/laozhu/hugo-nuo">laozhu/hugo-nuo</a> 相关说明，如果仍有不清楚的地方，可以在本站回复博主，或者去代码仓库给我提个 issue。</p>
+<h2 id="安装">安装</h2>
+<p>如果你还没有安装 Hugo，请先按照 <a href="https://gohugo.io/getting-started/">官方教程</a> 安装，然后用命令行创建一个新的博客站点（以 macOS 为例）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew install hugo
+$ hugo version <span style="color:#75715e"># 检查是否安装成功</span>
+$ cd ~/Sites
+$ hugo new site my-blog
+$ cd my-blog
+</code></pre></div><p>如果你不需要修改主题的样式和脚本，只需要替换某些 logo 图片，在 Hugo 博客目录下执行:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd themes
+$ git clone https://github.com/laozhu/hugo-nuo
+</code></pre></div><p>然后根据需要替换主题目录下的 <code>static/img</code> 里面的图片即可（请保持图片的尺寸一致）。</p>
+<h2 id="配置">配置</h2>
+<p>首先参照主题 <a href="https://github.com/laozhu/hugo-nuo/tree/master/exampleSite">exmapleSite</a> 里面的 <a href="https://github.com/laozhu/hugo-nuo/blob/master/exampleSite/config.toml">config.toml</a> 修改你自己博客的配置文件，具体可参照此 <a href="https://github.com/laozhu/hugo-nuo#the-config-file">README</a> 文件。</p>
+<p><em>备注：你可以将 exampleSite 文件夹添加到 <code>.gitignore</code> 中，避免被 push 到自己博客的代码仓库中。</em></p>
+<p>然后通过命令行分别添加 <a href="https://raw.githubusercontent.com/laozhu/hugo-nuo/master/exampleSite/content/links.md">links.md</a> 和 <a href="https://raw.githubusercontent.com/laozhu/hugo-nuo/master/exampleSite/content/about.md">about.md</a> 页面，格式参照相应链接中的内容即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new links.md
+$ hugo new about.md
+</code></pre></div><p>页面文件头中的 <code>title</code> 指该页面标题，<code>layout</code> 用于指定页面布局，当前可选 <code>about</code> 和 <code>links</code> 两种，<code>menu</code> 和 <code>weight</code> 指定该页面是否添加到主菜单，并通过权重调整菜单排序。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;About&#34;</span>
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">&#34;2014-04-09&#34;</span>
+<span style="color:#f92672">layout</span>: <span style="color:#e6db74">&#34;about&#34;</span>
+<span style="color:#f92672">menu</span>: <span style="color:#e6db74">&#34;main&#34;</span>
+<span style="color:#f92672">weight</span>: <span style="color:#ae81ff">40</span>
+</code></pre></div><p>这两个页面搞定后，剩下的就是构思和写作文章了。</p>
+<h2 id="定制主题">定制主题</h2>
+<p>主题的样式使用 <code>sass</code> 组织，脚本使用 <code>rollup</code> 打包，图片和字体不依赖，使用 <code>cpx</code> 直接复制即可，使用 <code>ImageOptim</code> 压缩各种格式的图片，执行以下命令安装非 <code>node</code> 环境下的依赖包：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew cask install imageoptim
+$ sudo gem install sass
+$ sudo pip install pygments
+</code></pre></div><p>进入到主题目录下，通过 <code>npm install</code> 安装主题开发所依赖的软件包，然后就可以使用 <code>npm run</code> 执行以下各种命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd themes/hugo-nuo
+
+<span style="color:#75715e"># 安装依赖</span>
+$ npm install
+
+<span style="color:#75715e"># js 脚本开发</span>
+$ npm run dev
+$ npm run build
+
+<span style="color:#75715e"># sass 样式开发</span>
+$ npm run sass
+
+<span style="color:#75715e"># 复制照片和字体</span>
+$ npm run images
+$ npm run fonts
+
+<span style="color:#75715e"># js / csss lint</span>
+$ npm run eslint
+$ npm run stylelint
+
+<span style="color:#75715e"># 优化图片大小</span>
+$ npm run imagemin
+</code></pre></div><h2 id="兼容性">兼容性</h2>
+<p>当前测试结果：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">浏览器</th>
+<th style="text-align:center">测试版本</th>
+<th style="text-align:center">支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Google Chrome</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">Mozilla Firefox</td>
+<td style="text-align:center">54</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">macOS Safari</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">iOS Safari</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">Chrome for Mobile</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">Opera</td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">QQ浏览器 for macOS</td>
+<td style="text-align:center">4.2</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">Microsoft Edge</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">IE</td>
+<td style="text-align:center">9-11</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">Old IE</td>
+<td style="text-align:center">7-8</td>
+<td style="text-align:center">❌</td>
+</tr>
+</tbody>
+</table>
+<h2 id="todo">TODO</h2>
+<p>对于这个主题，还有两点是我想去完善的：一是给文章页增加 <code>TOC</code> 支持，二是定制一个作品页面。先先立个 flag，有时间的话就做掉吧。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 文章 TOC 支持</li>
+<li><input disabled="" type="checkbox"> 设计一个作品（Works）页面</li>
+</ul>
+<h1 id="参考资料">参考资料</h1>
+<ol>
+<li><a href="https://github.com/laozhu/hugo-nuo">GitHub Repo</a></li>
+<li><a href="https://themes.gohugo.io/hugo-nuo/">Hugo Themes Page</a></li>
+<li><a href="https://laozhu.me/post/hugo-nuo-post-preview/">Hugo 主题 Nuo 文章样式预览</a></li>
+</ol></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://zhengkai15.github.io/zhengkai.github.io/tags/hugo"><span class="tag">Hugo</span></a></li>
+        
+          <li><a href="https://zhengkai15.github.io/zhengkai.github.io/tags/theme"><span class="tag">Theme</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.This post was published <strong>1315</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+  </section>
+  
+<footer class="site-footer">
+  <p>© 2017-2021 Kai Zheng</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank" rel="noopener">Nuo</a>.</p>
+  
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js"></script>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="https://zhengkai15.github.io/zhengkai.github.io/scripts/index.min.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('\/service-worker.js').then(function() {
+      console.log('[ServiceWorker] Registered');
+    });
+  }
+</script>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+  </body>
+</html>
