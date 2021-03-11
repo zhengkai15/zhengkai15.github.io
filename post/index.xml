@@ -47,7 +47,7 @@
     </item>
     
     <item>
-      <title>Loss</title>
+      <title>LightGBM和XGBoost Custom Loss Function</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/selflossfunc/</link>
       <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
       
@@ -62,6 +62,16 @@
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/macprobrome/</guid>
       <description>报错内容：No such file or directory “limits.h” csrutil disable # 需要在恢复模式下运行命令，具体请自行搜索。 $ xcode-select --install # 安装常用开发工具，如：git等。 $ sudo mount -uw / # 根目录挂载为可读写，否则无法在/usr/下建立文件，本修改重启前有效。 $ sudo ln -s &amp;#34;$(xcrun --show-sdk-path)/usr/include&amp;#34; /usr/include $ export SDKROOT=&amp;#34;$(xcrun --show-sdk-path)&amp;#34; # 设置环境变量 $ echo &amp;#34;export SDKROOT=\&amp;#34;\$(xcrun --show-sdk-path)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.bash_profile # zsh的自行搞定 $ sudo DevToolsSecurity -enable # 将系统置于开发模式 Reference：https://zhile.io/2018/09/26/macOS-10.14-install-sdk-headers.html</description>
+    </item>
+    
+    <item>
+      <title>爬取matplotlib官网所有例子</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/</link>
+      <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/</guid>
+      <description>爬取matplotlib官网所有例子
+from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait import os import urllib.request,re import requests PATH=lambda p:os.path.abspath(os.path.join( os.path.dirname(__file__), p)) class downMatplotlibDemo(): def __init__(self): self.urlList=self.getUrlList() self.driver=webdriver.Chrome() self.driver.maximize_window() self.GetDemoDownload() self.driver.close() def getUrlList(self): # try: url=&amp;#34;http://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots&amp;#34; matutl=&amp;#34;http://matplotlib.org/devdocs/gallery/&amp;#34; pageContent=urllib.request.urlopen(url).read().decode(&amp;#39;utf-8&amp;#39;) if pageContent: linkList=re.findall(&amp;#39;class=&amp;#34;reference internal&amp;#34; href=&amp;#34;../../gallery/(.*?)&amp;#34;&amp;gt;&amp;lt;span class=&amp;#34;std std-ref&amp;#34;&amp;gt;(.*?)&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;#39;, pageContent, re.S) charList=[matutl+var[0] for var in linkList if len(linkList)&amp;gt;0] return charList # except Exception: # print (&amp;#34;Create UrlList Error:&amp;#34;) #,e def GetDemoDownload(self): count=0 for url in self.urlList: self.driver.get(url) js=&amp;#34;var q=document.</description>
     </item>
     
     <item>

@@ -6,7 +6,9 @@
 
   
   <title>
-  Tags | KaiZheng
+  Tag → webdriver
+  
+   | KaiZheng
 </title>
 
   
@@ -41,7 +43,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="KaiZheng">
   <meta property="og:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.">
-  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/tags/">
+  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/">
   <meta property="og:image" content="/images/avatar.png">
 
 
@@ -50,8 +52,8 @@
 <meta name="generator" content="Hugo 0.81.0">
 
 
-<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/tags/">
-<link rel="alternate" type="application/rss+xml" href="https://zhengkai15.github.io/zhengkai.github.io/tags/index.xml" title="Kai Zheng">
+<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/">
+<link rel="alternate" type="application/rss+xml" href="https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/index.xml" title="Kai Zheng">
 
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -162,8 +164,8 @@
         </li>
       
         <li class="menu-item
-           is-active
-           is-active
+          
+          
           ">
           <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/">Tags</a>
         </li>
@@ -209,29 +211,29 @@
   </nav>
 </header>
 
-  <section class="main post-detail terms-list">
-    <header class="post-header">
-      <h1 class="post-title">Tags</h1>
+  <section class="main post-list">
+    <header class="list-header offscreen">
+      <h2 class="list-label">Posts List</h2>
     </header>
-    <div class="tags-cloud">
+    
+    
       
+        <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/" class="post-link">爬取matplotlib官网所有例子</a></h3>
+    <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary">爬取matplotlib官网所有例子
+from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait import os import urllib.request,re import requests PATH=lambda p:os.path.abspath(os.path.join( os.path.dirname(__file__), p)) class downMatplotlibDemo(): def __init__(self): self.urlList=self.getUrlList() self.driver=webdriver.Chrome() self.driver.maximize_window() self.GetDemoDownload() self.driver.close() def getUrlList(self): # try: url=&#34;http://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots&#34; matutl=&#34;http://matplotlib.org/devdocs/gallery/&#34; pageContent=urllib.request.urlopen(url).read().decode(&#39;utf-8&#39;) if pageContent: linkList=re.findall(&#39;class=&#34;reference internal&#34; href=&#34;../../gallery/(.*?)&#34;&gt;&lt;span class=&#34;std std-ref&#34;&gt;(.*?)&lt;/span&gt;&lt;/a&gt;&#39;, pageContent, re.S) charList=[matutl&#43;var[0] for var in linkList if len(linkList)&gt;0] return charList # except Exception: # print (&#34;Create UrlList Error:&#34;) #,e def GetDemoDownload(self): count=0 for url in self.urlList: self.driver.get(url) js=&#34;var q=document.</p>
+  <footer class="post-footer">
+    <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/">Read More →</a>
+  </footer>
+</article>
+
       
-        
-        <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/ai/" class="tag-s">ai</a>
-      
-        
-        <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/cartopy/" class="tag-s">cartopy</a>
-      
-        
-        <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/loss/" class="tag-s">loss</a>
-      
-        
-        <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/poem/" class="tag-s">poem</a>
-      
-        
-        <a href="https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/" class="tag-s">webdriver</a>
-      
-    </div>
+    
+    
   </section>
   
 <footer class="site-footer">
