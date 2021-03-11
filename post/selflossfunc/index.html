@@ -237,19 +237,19 @@ Training loss: This is the function that is optimized on the training data. For 
 <p>Training loss: Customizing the training loss in LightGBM requires defining a function that takes in two arrays, the targets and their predictions. In turn, the function should return two arrays of the gradient and hessian of each observation. As noted above, we need to use calculus to derive gradient and hessian and then implement it in Python.</p>
 <p>Validation loss: Customizing the validation loss in LightGBM requires defining a function that takes in the same two arrays, but returns three values: a string with name of metric to print, the loss itself, and a boolean about whether higher is better.</p>
 <p>官方例子-LGBM中自定义log likelihood loss：</p>
-<h1 id="self-defined-objective-function">self-defined objective function</h1>
-<h1 id="fpreds-array-train_data-dataset---grad-array-hess-array">f(preds: array, train_data: Dataset) -&gt; grad: array, hess: array</h1>
-<h1 id="log-likelihood-loss">log likelihood loss</h1>
-<p>def loglikelihood(preds, train_data):
+<p>self-defined objective function
+f(preds: array, train_data: Dataset) -&gt; grad: array, hess: array
+log likelihood loss
+def loglikelihood(preds, train_data):
 labels = train_data.get_label()
 preds = 1. / (1. + np.exp(-preds))
 grad = preds - labels
 hess = preds * (1. - preds)
 return grad, hess</p>
-<h1 id="self-defined-eval-metric">self-defined eval metric</h1>
-<h1 id="fpreds-array-train_data-dataset---name-string-eval_result-float-is_higher_better-bool">f(preds: array, train_data: Dataset) -&gt; name: string, eval_result: float, is_higher_better: bool</h1>
-<h1 id="binary-error">binary error</h1>
-<p>def binary_error(preds, train_data):
+<p>self-defined eval metric
+f(preds: array, train_data: Dataset) -&gt; name: string, eval_result: float, is_higher_better: bool
+binary error
+def binary_error(preds, train_data):
 labels = train_data.get_label()
 return &lsquo;error&rsquo;, np.mean(labels != (preds &gt; 0.5)), False
 实例

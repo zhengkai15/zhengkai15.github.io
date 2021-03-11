@@ -244,46 +244,46 @@ sudo apt-get install vim
 注意：使用runfile安装需要手动禁用系统自带的Nouveau驱动</p>
 <p>lsmod | grep nouveau # 要确保这条命令无输出
 vim /etc/modprobe.d/blacklist-nouveau.conf</p>
-<h1 id="添加下面两行">添加下面两行：</h1>
-<p>#######################################################
+<p>添加下面两行：
+#######################################################
 blacklist nouveau
 options nouveau modeset=0
 #######################################################</p>
-<h1 id="保存后重启">保存后重启：</h1>
-<p>sudo update-initramfs -u
+<p>保存后重启：
+sudo update-initramfs -u
 sudo reboot</p>
-<h1 id="再次输入以下命令无输出就表示设置成功了">再次输入以下命令，无输出就表示设置成功了</h1>
-<p>lsmod | grep nouveau
-2.2 安装合适的显卡驱动</p>
-<h1 id="先清空现有的显卡驱动及依赖并重启">先清空现有的显卡驱动及依赖并重启</h1>
-<p>sudo apt-get remove &ndash;purge nvidia*
+<p>再次输入以下命令，无输出就表示设置成功了
+lsmod | grep nouveau
+##2.2 安装合适的显卡驱动
+先清空现有的显卡驱动及依赖并重启
+sudo apt-get remove &ndash;purge nvidia*
 sudo apt autoremove              <br>
-sudo reboot</p>
-<h1 id="添加ppa源并安装最新的驱动">添加ppa源并安装最新的驱动</h1>
-<p>sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo reboot                      <br>
+添加ppa源并安装最新的驱动
+sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 ubuntu-drivers devices                       <br>
-sudo apt install nvidia-driver-440</p>
-<h1 id="为了防止自动更新驱动导致的兼容性问题我们还可以锁定驱动版本">为了防止自动更新驱动导致的兼容性问题，我们还可以锁定驱动版本:</h1>
-<p>sudo apt-mark hold nvidia-driver-440</p>
-<h1 id="nvidia-driver-440-set-on-hold">nvidia-driver-440 set on hold.</h1>
-<p>并在【软件和更新】菜单中的附加驱动列表中，找到刚刚安装的nvidia-driver-440，选定即可。</p>
+sudo apt install nvidia-driver-440
+为了防止自动更新驱动导致的兼容性问题，我们还可以锁定驱动版本:
+sudo apt-mark hold nvidia-driver-440
+nvidia-driver-440 set on hold.
+并在【软件和更新】菜单中的附加驱动列表中，找到刚刚安装的nvidia-driver-440，选定即可。</p>
 <p>输入sudo reboot重启后输入nvidia-smi，显示下图信息，这样表示显卡驱动已经ready：</p>
 <p>image-20191230144403606</p>
 <p>lsmod | grep nvidia # 看到下面的输出则为安装成功，如果无输出，表示有问题
 image-20191231111357213</p>
 <p>也可以手动去官网下载对应的安装程序安装显卡</p>
-<h1 id="动态监测显卡">动态监测显卡</h1>
-<p>watch -n 1 nvidia-smi # 1表示每1秒刷新一次
-watch -n 0.01 nvidia-smi # 也可改成0.01s刷新一次</p>
-<h1 id="也可以用gpustat">也可以用gpustat</h1>
-<p>pip install gpustat
+<p><em>动态监测显卡</em>
+watch -n 1 nvidia-smi # 1表示每1秒刷新一次
+watch -n 0.01 nvidia-smi # 也可改成0.01s刷新一次
+<em>也可以用gpustat</em>
+pip install gpustat
 gpustat -i 1 -P
-3. 安装CUDA
+#3. 安装CUDA
 百度百科：CUDA（Compute Unified Device Architecture），是显卡厂商NVIDIA推出的运算平台。 CUDA是一种由NVIDIA推出的通用并行计算架构，该架构使GPU能够解决复杂的计算问题。</p>
 <p>Linux系统下有两种方案安装CUDA：一种是Package Manager Installation(.deb)，另一种是Runfile Installation(.run)。本文采取的是第一种（也是官方推荐的方式）。</p>
 <p>CUDA对于系统环境有严格的依赖，比如对于CUDA10.0有如下的要求。其他的版本可查看对应的Online Documentation。</p>
-<p>#3.1 安装前的准备
+<p>##3.1 安装前的准备
 在安装CUDA之前需要先确定环境是ready的，以免出现乱七八糟的bug无从下手。直接引用官网的说明：</p>
 <p>Some actions must be taken before the CUDA Toolkit and Driver can be installed on Linux:</p>
 <p>Verify the system has a CUDA-capable GPU.
