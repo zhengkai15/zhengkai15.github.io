@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>webdriver on My blog is awesome</title>
+    <title>webdriver on Kai Zheng</title>
     <link>https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/</link>
-    <description>Recent content in webdriver on My blog is awesome</description>
+    <description>Recent content in webdriver on Kai Zheng</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Wed, 10 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>爬取matplotlib官网所有例子</title>
