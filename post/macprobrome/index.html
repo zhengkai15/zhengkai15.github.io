@@ -222,8 +222,8 @@
       <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
     </header>
     <article class="post-content"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">报错内容：No such file or directory “limits.h”
-</code></pre></div><h1 id="csrutil-disable--需要在恢复模式下运行命令具体请自行搜索">csrutil disable # 需要在恢复模式下运行命令，具体请自行搜索。</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">$ xcode-select --install # 安装常用开发工具，如：git等。
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">csrutil disable # 需要在恢复模式下运行命令，具体请自行搜索。
+$ xcode-select --install # 安装常用开发工具，如：git等。
 $ sudo mount -uw / # 根目录挂载为可读写，否则无法在/usr/下建立文件，本修改重启前有效。
 $ sudo ln -s &#34;$(xcrun --show-sdk-path)/usr/include&#34; /usr/include
 $ export SDKROOT=&#34;$(xcrun --show-sdk-path)&#34; # 设置环境变量
