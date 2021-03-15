@@ -211,19 +211,8 @@
   
    <article class="post-entry">
   <header class="post-header">
-    <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/" class="post-link">滑稽-poem</a></h3>
-    <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 </p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/">Read More →</a>
-  </footer>
-</article>
-  <article class="post-entry">
-  <header class="post-header">
     <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/macprobrome/" class="post-link">升级后的系统是macOS 10.15 (Catalina) ，安装cartopy</a></h3>
-    <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
+    <p class="post-meta">@Kai Zheng · Mar 15, 2021 · 1 min read</p>
   </header>
   
   <p class="post-summary">报错内容：No such file or directory “limits.h” csrutil disable # 需要在恢复模式下运行命令，具体请自行搜索。 $ xcode-select --install # 安装常用开发工具，如：git等。 $ sudo mount -uw / # 根目录挂载为可读写，否则无法在/usr/下建立文件，本修改重启前有效。 $ sudo ln -s &#34;$(xcrun --show-sdk-path)/usr/include&#34; /usr/include $ export SDKROOT=&#34;$(xcrun --show-sdk-path)&#34; # 设置环境变量 $ echo &#34;export SDKROOT=\&#34;\$(xcrun --show-sdk-path)\&#34;&#34; &gt;&gt; ~/.bash_profile # zsh的自行搞定 $ sudo DevToolsSecurity -enable # 将系统置于开发模式 Reference：https://zhile.io/2018/09/26/macOS-10.14-install-sdk-headers.html</p>
@@ -233,15 +222,25 @@
 </article>
   <article class="post-entry">
   <header class="post-header">
-    <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/tensorflow_install/" class="post-link">TensorFlow2.0 Install</a></h3>
-    <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 2 min read</p>
+    <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/" class="post-link">爬取matplotlib官网所有例子</a></h3>
+    <p class="post-meta">@Kai Zheng · Mar 14, 2021 · 1 min read</p>
   </header>
   
-  <p class="post-summary">新的GPU服务器环境配置–Ubuntu18.04&#43;CUDA10.0&#43;cuDNN7.6.5&#43;TensorFlow2.0安装笔记 @QI ZHANG · DEC 30, 2019 · 7 MIN READ
-第一次安装CUDA的过程简直抓狂，中间出现了很多次莫名其妙的bug，踩了很多坑。比如装好了CUDA重启后进不去桌面系统了，直接黑屏、比如鼠标键盘都不work了、再比如装好了却安装不了TensorFlow-GPU……看了一圈网上的安装教程，发现还是官方指南真香了~ 新年第一篇，分享一下我的Ubuntu 18.04 &#43; CUDA 10.0 &#43; cuDNN 7.6.5 &#43; TensorFlow 2.0 安装笔记，希望可以帮助大家少踩坑。 整个安装流程大致是：安装显卡驱动 -&gt; 安装CUDA -&gt; 安装cuDNN -&gt; 安装tensorflow-gpu并测试。
-</p>
+  <p class="post-summary">爬取matplotlib官网所有例子
+from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait import os import urllib.request,re import requests PATH=lambda p:os.path.abspath(os.path.join( os.path.dirname(__file__), p)) class downMatplotlibDemo(): def __init__(self): self.urlList=self.getUrlList() self.driver=webdriver.Chrome() self.driver.maximize_window() self.GetDemoDownload() self.driver.close() def getUrlList(self): # try: url=&#34;http://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots&#34; matutl=&#34;http://matplotlib.org/devdocs/gallery/&#34; pageContent=urllib.request.urlopen(url).read().decode(&#39;utf-8&#39;) if pageContent: linkList=re.findall(&#39;class=&#34;reference internal&#34; href=&#34;../../gallery/(.*?)&#34;&gt;&lt;span class=&#34;std std-ref&#34;&gt;(.*?)&lt;/span&gt;&lt;/a&gt;&#39;, pageContent, re.S) charList=[matutl&#43;var[0] for var in linkList if len(linkList)&gt;0] return charList # except Exception: # print (&#34;Create UrlList Error:&#34;) #,e def GetDemoDownload(self): count=0 for url in self.urlList: self.driver.get(url) js=&#34;var q=document.</p>
   <footer class="post-footer">
-    <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/tensorflow_install/">Read More →</a>
+    <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/">Read More →</a>
+  </footer>
+</article>
+  <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/" class="post-link">滑稽-poem</a></h3>
+    <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary">轻轻的你走了，真如我悄悄的更在后面，保护你的安全。 </p>
+  <footer class="post-footer">
+    <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/newpaper/">Read More →</a>
   </footer>
 </article>
   <article class="post-entry">
