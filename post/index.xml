@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
-    <lastBuildDate>Mon, 15 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/about/</link>
@@ -15,6 +15,16 @@
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/about/</guid>
       <description>分享meteo Code（ncl matlab python）、AI、电脑相关技术，ios技巧、偶尔爬一爬数据玩，提供数据分析服务，偶尔谈一谈世界观。 心理咨询师。</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/ml/</link>
+      <pubDate>Tue, 16 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/ml/</guid>
+      <description>GAN Seq-Seq Transformer(attension is what you need) LSTM Unet
+Reference：https://zhile.io/2018/09/26/macOS-10.14-install-sdk-headers.html</description>
     </item>
     
     <item>
