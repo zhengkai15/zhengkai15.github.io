@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vscode on Kai Zheng</title>
+    <link>https://zhengkai15.github.io/zhengkai.github.io/tags/vscode/</link>
+    <description>Recent content in Vscode on Kai Zheng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <lastBuildDate>Wed, 10 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My VScode  Extension</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/vscode/</link>
+      <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/vscode/</guid>
+      <description>1、Git History 2、Markdown All in one 3、Jupyter 4、One Dark Pro 5、Python 6、Remote-SSH 7、vscode-icon 8、VSCodeFileHeader 9、NCL 还是不容sublime的 command + B </description>
+    </item>
+    
+  </channel>
+</rss>

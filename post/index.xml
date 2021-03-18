@@ -18,13 +18,13 @@
     </item>
     
     <item>
-      <title>Machine Learning</title>
+      <title>Machine Learning bookmark</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/ml/</link>
       <pubDate>Tue, 16 Mar 2021 11:15:31 +0800</pubDate>
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/ml/</guid>
       <description>GAN Seq-Seq Transformer(attension is what you need) LSTM Unet
-Reference：https://zhile.io/2018/09/26/macOS-10.14-install-sdk-headers.html</description>
+Pytorch :https://pytorch.org/tutorials/ python: https://docs.python.org/zh-cn/3/tutorial/classes.html Linux: Base of ML：https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/模型评估与模型调优.html PR-ROC 曲线：https://blog.csdn.net/PanYHHH/article/details/110741286</description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ from selenium import webdriver from selenium.webdriver.support.ui import WebDriv
       <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/vscode/</guid>
-      <description>1、Git History 2、Markdown All in one 3、Jupyter 4、One Dark Pro 5、Python 6、Remote-SSH 7、vscode-icon 8、VSCodeFileHeader </description>
+      <description>1、Git History 2、Markdown All in one 3、Jupyter 4、One Dark Pro 5、Python 6、Remote-SSH 7、vscode-icon 8、VSCodeFileHeader 9、NCL 还是不容sublime的 command + B </description>
     </item>
     
     <item>
