@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
-    <lastBuildDate>Tue, 16 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/about/</link>
@@ -15,6 +15,19 @@
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/about/</guid>
       <description>分享meteo Code（ncl matlab python）、AI、电脑相关技术，ios技巧、偶尔爬一爬数据玩，提供数据分析服务，偶尔谈一谈世界观。 心理咨询师。</description>
+    </item>
+    
+    <item>
+      <title>Pycharm and VS code deployment</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/pycharm/</link>
+      <pubDate>Fri, 19 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/pycharm/</guid>
+      <description>远程debug https://www.jb51.net/article/166790.htm
+社区办edu减掉的功能 https://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html
+Pyenv which python
+新建文件，右键deployment
+可以直接跑python（直接跑train脚本，或者下面terminal 登录远程服务器，或者terminal里面提交），但是不能直接跑shell，我还是习惯用shell脚本来提交的。 暂时习惯用vscode（shell也不能直接跑，但是下面直接是远程的terminal）</description>
     </item>
     
     <item>
@@ -88,7 +101,7 @@ from selenium import webdriver from selenium.webdriver.support.ui import WebDriv
       <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
       
       <guid>https://zhengkai15.github.io/zhengkai.github.io/post/vscode/</guid>
-      <description>1、Git History 2、Markdown All in one 3、Jupyter 4、One Dark Pro 5、Python 6、Remote-SSH 7、vscode-icon 8、VSCodeFileHeader 9、NCL 还是不容sublime的 command + B </description>
+      <description>1、Git History 2、Markdown All in one 3、Jupyter 4、One Dark Pro 5、Python 6、Remote-SSH 7、vscode-icon 8、VSCodeFileHeader 9、NCL 还是不容sublime的 command + B 10、Remote Development 远程连接，加debug </description>
     </item>
     
     <item>
