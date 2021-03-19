@@ -5,11 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>
-  Tag → Vscode
-  
-   | KaiZheng
-</title>
+  <title>Pycharm and VS code deployment</title>
 
   
   
@@ -30,20 +26,34 @@
 
   
   <meta name="author" content="Kai Zheng">
-  <meta name="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.">
+  <meta name="description" content="远程debug https://www.jb51.net/article/166790.htm
+社区办edu减掉的功能 https://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html
+Pyenv which python
+新建文件，右键deployment
+可以直接跑python（直接跑train脚本，或者下面terminal 登录远程服务器，或者terminal里面提交），但是不能直接跑shell，我还是习惯用shell脚本来提交的。 暂时习惯用vscode（shell也不能直接跑，但是下面直接是远程的terminal）">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@gohugoio">
-  <meta name="twitter:title" content="KaiZheng">
-  <meta name="twitter:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.">
-  <meta name="twitter:image" content="/images/avatar.png">
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="Pycharm and VS code deployment">
+    <meta name="twitter:description" content="远程debug https://www.jb51.net/article/166790.htm
+社区办edu减掉的功能 https://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html
+Pyenv which python
+新建文件，右键deployment
+可以直接跑python（直接跑train脚本，或者下面terminal 登录远程服务器，或者terminal里面提交），但是不能直接跑shell，我还是习惯用shell脚本来提交的。 暂时习惯用vscode（shell也不能直接跑，但是下面直接是远程的terminal）">
+    <meta name="twitter:image" content="/images/avatar.png">
+  
 
   
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="KaiZheng">
-  <meta property="og:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.">
-  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/tags/vscode/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Pycharm and VS code deployment">
+  <meta property="og:description" content="远程debug https://www.jb51.net/article/166790.htm
+社区办edu减掉的功能 https://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html
+Pyenv which python
+新建文件，右键deployment
+可以直接跑python（直接跑train脚本，或者下面terminal 登录远程服务器，或者terminal里面提交），但是不能直接跑shell，我还是习惯用shell脚本来提交的。 暂时习惯用vscode（shell也不能直接跑，但是下面直接是远程的terminal）">
+  <meta property="og:url" content="https://zhengkai15.github.io/zhengkai.github.io/post/pycharm/">
   <meta property="og:image" content="/images/avatar.png">
 
 
@@ -52,8 +62,7 @@
 <meta name="generator" content="Hugo 0.81.0">
 
 
-<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/tags/vscode/">
-<link rel="alternate" type="application/rss+xml" href="https://zhengkai15.github.io/zhengkai.github.io/tags/vscode/index.xml" title="Kai Zheng">
+<link rel="canonical" href="https://zhengkai15.github.io/zhengkai.github.io/post/pycharm/">
 
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -106,8 +115,12 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
 
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
 
 
 
@@ -128,6 +141,10 @@
   <body>
     <div class="suspension">
       <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+	<a role="button" aria-label="Go to comments" title="Go to comments" class="to-comment" href="#disqus_thread"><span class="icon icon-comment" aria-hidden="true"></span></a>
+        
       
     </div>
     
@@ -152,7 +169,7 @@
         <li class="menu-item
           
           
-          ">
+           is-active">
           <a href="https://zhengkai15.github.io/zhengkai.github.io/">Home</a>
         </li>
       
@@ -208,27 +225,54 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">Posts List</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Pycharm and VS code deployment</h1>
+      <p class="post-meta">@Kai Zheng · Mar 19, 2021 · 1 min read</p>
     </header>
-    
-    
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://zhengkai15.github.io/zhengkai.github.io/post/vscode/" class="post-link">My VScode  Extension</a></h3>
-    <p class="post-meta">@Kai Zheng · Mar 10, 2021 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">1、Git History 2、Markdown All in one 3、Jupyter 4、One Dark Pro 5、Python 6、Remote-SSH 7、vscode-icon 8、VSCodeFileHeader 9、NCL 还是不容sublime的 command &#43; B 10、Remote Development 远程连接，加debug </p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://zhengkai15.github.io/zhengkai.github.io/post/vscode/">Read More →</a>
-  </footer>
+    <article class="post-content"><p>远程debug
+<a href="https://www.jb51.net/article/166790.htm">https://www.jb51.net/article/166790.htm</a></p>
+<p>社区办edu减掉的功能
+<a href="https://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html">https://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html</a></p>
+<p>Pyenv which python</p>
+<p>新建文件，右键deployment</p>
+<p>可以直接跑python（直接跑train脚本，或者下面terminal 登录远程服务器，或者terminal里面提交），但是不能直接跑shell，我还是习惯用shell脚本来提交的。
+暂时习惯用vscode（shell也不能直接跑，但是下面直接是远程的terminal）</p>
 </article>
-
+    <footer class="post-footer">
       
+      <ul class="post-tags">
+        
+          <li><a href="https://zhengkai15.github.io/zhengkai.github.io/tags/tool"><span class="tag">Tool</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.
+      </p>
+    </footer>
     
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
     
   </section>
   
@@ -243,8 +287,33 @@
 
 
 
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
 
 
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
 
 
 
