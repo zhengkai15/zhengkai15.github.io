@@ -97,6 +97,15 @@ from selenium import webdriver from selenium.webdriver.support.ui import WebDriv
     
     <item>
       <title>My VScode  Extension</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/software-on-mac-windows/</link>
+      <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/software-on-mac-windows/</guid>
+      <description>sublime:插件 iterm：设置 filezilla office conda：/opt/anaconda3/ python:basemap,cartopy pannoly parallels desktop pycharm vscode ntfs for mac tuxera ntfs runcat matlab remote connection ncl:gcc,x11 jupyterlab app store 微信 wps 百度网盘 tencent meeting google chrome 有道词典 网易云音乐 360压缩 brew mac ports </description>
+    </item>
+    
+    <item>
+      <title>My VScode  Extension</title>
       <link>https://zhengkai15.github.io/zhengkai.github.io/post/vscode/</link>
       <pubDate>Wed, 10 Mar 2021 11:15:31 +0800</pubDate>
       
