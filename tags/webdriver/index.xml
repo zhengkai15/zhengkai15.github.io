@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webdriver on Kai Zheng</title>
+    <link>https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/</link>
+    <description>Recent content in webdriver on Kai Zheng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <lastBuildDate>Sun, 14 Mar 2021 11:15:31 +0800</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/tags/webdriver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>爬取matplotlib官网所有例子</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/</link>
+      <pubDate>Sun, 14 Mar 2021 11:15:31 +0800</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/webdriver/</guid>
+      <description>爬取matplotlib官网所有例子
+from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait import os import urllib.request,re import requests PATH=lambda p:os.path.abspath(os.path.join( os.path.dirname(__file__), p)) class downMatplotlibDemo(): def __init__(self): self.urlList=self.getUrlList() self.driver=webdriver.Chrome() self.driver.maximize_window() self.GetDemoDownload() self.driver.close() def getUrlList(self): # try: url=&amp;#34;http://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots&amp;#34; matutl=&amp;#34;http://matplotlib.org/devdocs/gallery/&amp;#34; pageContent=urllib.request.urlopen(url).read().decode(&amp;#39;utf-8&amp;#39;) if pageContent: linkList=re.findall(&amp;#39;class=&amp;#34;reference internal&amp;#34; href=&amp;#34;../../gallery/(.*?)&amp;#34;&amp;gt;&amp;lt;span class=&amp;#34;std std-ref&amp;#34;&amp;gt;(.*?)&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;#39;, pageContent, re.S) charList=[matutl+var[0] for var in linkList if len(linkList)&amp;gt;0] return charList # except Exception: # print (&amp;#34;Create UrlList Error:&amp;#34;) #,e def GetDemoDownload(self): count=0 for url in self.urlList: self.driver.get(url) js=&amp;#34;var q=document.</description>
+    </item>
+    
+  </channel>
+</rss>

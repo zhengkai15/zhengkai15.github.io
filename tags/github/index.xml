@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on Kai Zheng</title>
+    <link>https://zhengkai15.github.io/zhengkai.github.io/tags/github/</link>
+    <description>Recent content in GitHub on Kai Zheng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://zhengkai15.github.io/zhengkai.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Git Submodule 管理项目</title>
+      <link>https://zhengkai15.github.io/zhengkai.github.io/post/git-submodule-tutorial-laozhu/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhengkai15.github.io/zhengkai.github.io/post/git-submodule-tutorial-laozhu/</guid>
+      <description>&lt;p&gt;在此之前，博主并不知道 &lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Tools-Submodules&#34;&gt;Git Submodule&lt;/a&gt; 为何物，直到遇到这样一个困扰：本站的代码仓库是 → &lt;a href=&#34;https://github.com/laozhu/my-blog&#34;&gt;laozhu/my-blog&lt;/a&gt;，所使用主题（theme）的代码仓库是 → &lt;a href=&#34;https://github.com/laozhu/hugo-nuo&#34;&gt;laozhu/hugo-nuo&lt;/a&gt;。这个主题的作者（也就是本人）仍在积极开发中，每次主题有了新的 &lt;code&gt;commit &amp;amp; push&lt;/code&gt;，我都需要在主题仓库和网站仓库同时 &lt;code&gt;pull&lt;/code&gt; 代码，&lt;code&gt;pull&lt;/code&gt; 完成还得在网站仓库 &lt;code&gt;commit&lt;/code&gt; 代码，这种模式实在很 low 逼，下面我们通过 &lt;code&gt;Git Submodule&lt;/code&gt; 解决这个问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
