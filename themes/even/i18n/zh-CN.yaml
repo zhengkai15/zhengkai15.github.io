@@ -24,7 +24,7 @@ sitePV:
 pagePV:
   other: "%s 次阅读"
 
-# ===== post =====
+# ===== posts =====
 prevPage:
   other: "上一页"
 

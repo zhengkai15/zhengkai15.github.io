@@ -24,7 +24,7 @@ sitePV:
 pagePV:
   other: "Прочитано раз: %s"
 
-# ===== post =====
+# ===== posts =====
 prevPage:
   other: "Назад"
 

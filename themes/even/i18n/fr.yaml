@@ -24,7 +24,7 @@ sitePV:
 pagePV:
   other: "%s temps de lecture"
 
-# ===== post =====
+# ===== posts =====
 prevPage:
   other: "Plus récents"
 

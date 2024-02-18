@@ -50,8 +50,8 @@ Even.mobileNavbar = function() {
 
 Even._initToc = function() {
   const SPACING = 20;
-  const $toc = $('.post-toc');
-  const $footer = $('.post-footer');
+  const $toc = $('.posts-toc');
+  const $footer = $('.posts-footer');
 
   if ($toc.length) {
     const minScrollTop = $toc.offset().top - SPACING;
@@ -88,7 +88,7 @@ Even._initToc = function() {
   const HEADERFIX = 30;
   const $toclink = $('.toc-link');
   const $headerlink = $('.headerlink');
-  const $tocLinkLis = $('.post-toc-content li');
+  const $tocLinkLis = $('.posts-toc-content li');
 
   const headerlinkTop = $.map($headerlink, function(link) {
     return $(link).offset().top;
@@ -126,7 +126,7 @@ Even._initToc = function() {
 
 Even.fancybox = function() {
   if ($.fancybox) {
-    $('.post-content').each(function() {
+    $('.posts-content').each(function() {
       $(this).find('img').each(function() {
         $(this).wrap(`<a class="fancybox" href="${this.src}" data-fancybox="gallery" data-caption="${this.title}"></a>`);
       });
@@ -178,7 +178,7 @@ Even.chroma = function() {
 };
 
 Even.toc = function() {
-  const tocContainer = document.getElementById('post-toc');
+  const tocContainer = document.getElementById('posts-toc');
   if (tocContainer !== null) {
     const toc = document.getElementById('TableOfContents');
     if (toc === null) {
@@ -210,7 +210,7 @@ Even._linkToc = function() {
   for (let i = 0; i < links.length; i++) links[i].className += ' toc-link';
 
   for (let num = 1; num <= 6; num++) {
-    const headers = document.querySelectorAll('.post-content>h' + num);
+    const headers = document.querySelectorAll('.posts-content>h' + num);
     for (let i = 0; i < headers.length; i++) {
       const header = headers[i];
       header.innerHTML = `<a href="#${header.id}" class="headerlink anchor"><i class="iconfont icon-link"></i></a>${header.innerHTML}`;
@@ -267,7 +267,7 @@ Even.sequence = function() {
 };
 
 Even.responsiveTable = function() {
-  const tables = document.querySelectorAll('.post-content table:not(.lntable)');
+  const tables = document.querySelectorAll('.posts-content table:not(.lntable)');
   for (let i = 0; i < tables.length; i++) {
     const table = tables[i];
     const wrapper = document.createElement('div');

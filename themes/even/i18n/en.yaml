@@ -24,7 +24,7 @@ sitePV:
 pagePV:
   other: "%s times read"
 
-# ===== post =====
+# ===== posts =====
 prevPage:
   other: "Prev"
 

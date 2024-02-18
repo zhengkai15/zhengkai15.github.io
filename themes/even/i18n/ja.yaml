@@ -24,7 +24,7 @@ sitePV:
 pagePV:
   other: "ページビュー: %s"
 
-# ===== post =====
+# ===== posts =====
 prevPage:
   other: "前へ"
 
