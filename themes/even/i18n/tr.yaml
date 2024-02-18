@@ -24,7 +24,7 @@ sitePV:
 pagePV:
   other: "okuma süresi: %s"
 
-# ===== post =====
+# ===== posts =====
 prevPage:
   other: "Önceki"
 

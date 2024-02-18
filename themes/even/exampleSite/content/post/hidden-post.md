@@ -1,5 +1,5 @@
 ---
-title: "This is a hidden post."
+title: "This is a hidden posts."
 date: 2018-03-08T17:40:19+08:00
 lastmod: 2018-03-08T22:01:19+08:00
 draft: false

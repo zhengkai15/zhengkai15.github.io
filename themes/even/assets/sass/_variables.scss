@@ -111,63 +111,63 @@ $menu-link-font-size: 18px !default;
 $mobile-navbar-height: 50px !default;
 
 // ========== Post ========== //
-// Margin bottom of post list.
+// Margin bottom of posts list.
 $post-list-margin-bottom: 20px !default;
 
-// Padding of the post.
+// Padding of the posts.
 $post-padding: 1.5em 0 !default;
 
-// Border top of the post + post.
+// Border top of the posts + posts.
 $post-border: 1px solid $light-gray !default;
 
-// Font size of post title.
+// Font size of posts title.
 $post-title-font-size: 27px !default;
 
-// Font weight of post title.
+// Font weight of posts title.
 $post-title-font-weight: 400 !default;
 
-// Margin top of the post meta (post time).
+// Margin top of the posts meta (posts time).
 $post-meta-margin-top: 5px !default;
 
-// Font color of the post meta.
+// Font color of the posts meta.
 $post-meta-font-color: $dark-gray !default;
 
 // Border bottom of the read more link when hover it.
 $post-readMore-border-bottom: 1px solid $theme-color !default;
 
-// Margin top of the post footer.
+// Margin top of the posts footer.
 $post-footer-margin-top: 20px !default;
 
-// Border top of post footer.
+// Border top of posts footer.
 $post-footer-border-top: 1px solid $light-gray !default;
 
-// Padding of the post tags.
+// Padding of the posts tags.
 $post-tags-padding: 15px 0 !default;
 
-// Font size of post pagination.
+// Font size of posts pagination.
 $post-nav-font-size: 18px !default;
 
 
 // ========== TOC ========== //
-// Width of the post toc.
+// Width of the posts toc.
 $post-toc-width: 200px !default;
 
-// Backgroud color of the post toc.
+// Backgroud color of the posts toc.
 $post-toc-backgroud: rgba($deputy-color, 0.6) !default;
 
-// Margin left of the post toc.
+// Margin left of the posts toc.
 $post-toc-margin-left: $global-body-width - 15px !default;
 
-// Font size of the post toc title.
+// Font size of the posts toc title.
 $post-toc-title-size: 20px !default;
 
-// Font size of the post toc content.
+// Font size of the posts toc content.
 $post-toc-content: 15px !default;
 
-// List style of the post toc list.
+// List style of the posts toc list.
 $post-toc-list-style: square !default;
 
-// Max screen media of the post toc.
+// Max screen media of the posts toc.
 $toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
 
 // ========== Content ========== //
@@ -265,7 +265,7 @@ $code-background: $deputy-color !default;
 // Margin of the pagination.
 $pagination-margin: 2em 0 !default;
 
-// Font size of the pagination (Without post, post pagination see line 140).
+// Font size of the pagination (Without posts, posts pagination see line 140).
 $pagination-font-size: 20px !default;
 
 
@@ -296,23 +296,23 @@ $archive-name-font-size: 30px !default;
 // Font size of the collection title.
 $collection-title-font-size: 28px !default;
 
-// Padding of the archive post.
+// Padding of the archive posts.
 $archive-post-padding: 3px 20px !default;
 
-// Padding of the archive post in mobile.
+// Padding of the archive posts in mobile.
 $archive-post-mobile-padding: 5px 10px !default;
 
-// Font size of the archive post time in mobile.
+// Font size of the archive posts time in mobile.
 $archive-post-mobile-time-font-size: 13px !default;
 
-// Border left of the archive post, use $archive-post-hover-border-left when hover it.
+// Border left of the archive posts, use $archive-posts-hover-border-left when hover it.
 $archive-post-border-left: 1px solid $gray !default;
 $archive-post-hover-border-left: 3px solid $theme-color !default;
 
-// Transition of the archive post when hover it.
+// Transition of the archive posts when hover it.
 $archive-post-hover-transition: 0.2s ease-out !default;
 
-// Transform of the archive post when hover it.
+// Transform of the archive posts when hover it.
 $archive-post-hover-transform: translateX(4px) !default;
 
 // ========== General Terms ========== //
