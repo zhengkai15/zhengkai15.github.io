@@ -39,3 +39,5 @@ sequenceDiagrams:
   options: ""
 
 ---
+
+[[Awesome-Weather-Forecast](https://github.com/zhengkai15/Awesome-Weather-Forecast)]:An algorithm that automatically obtains data from a remote server on a regular basis, automatically loads models and makes forecasts.

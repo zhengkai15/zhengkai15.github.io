@@ -13,7 +13,7 @@
       <link>http://localhost:1313/post/awesome-weather-forecast/</link>
       <pubDate>Wed, 17 Jan 2024 20:40:45 +0800</pubDate>
       <guid>http://localhost:1313/post/awesome-weather-forecast/</guid>
-      <description></description>
+      <description>[Awesome-Weather-Forecast]:An algorithm that automatically obtains data from a remote server on a regular basis, automatically loads models and makes forecasts.</description>
     </item>
   </channel>
 </rss>
