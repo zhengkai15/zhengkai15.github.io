@@ -47,8 +47,9 @@ sequenceDiagrams:
 - 😀 I’m currently working on **Large model of weather forecast** and **SR**.
 
 ## Project
+- 📚 [[Survey on Data Driven Weather Forecast](https://github.com/zhengkai15/Awesome-Weather-Forecast)]
 - 🚀 SR(Super Resolution) on Precipitation
-- 🌱 Data driven Climate Data Assimilation
+- 🌱 Data Driven Climate Data Assimilation
 - 🚀 Cryosphere Large Language Model
 - 🐱‍ Image and Video Generation
 
@@ -57,10 +58,10 @@ sequenceDiagrams:
 - 👨‍💻‍ 2023-11 Now     SAIS             Algorithm Researcher
 - 👨‍💻‍ 2022-01 2023-11 Envison Digital  Algorithm Engineer
 -->
-|      | Start   | End     | Employer        | Position              |
-|------|---------|---------|-----------------|-----------------------|
-| - 👨‍💻‍ | 2023-11 | Now     | SAIS            | Algorithm Researcher  |
-| - 👨‍💻‍ | 2022-01 | 2023-11 | Envison Digital | Algorithm Engineer    |
+|      | Start   | End      |     Employer    | Position             |
+|------|---------|----------|-----------------|----------------------|
+| - 👨‍💻‍ | 2023-11 | Now      | SAIS            | Algorithm Researcher |
+| - 👨‍💻‍ | 2022-01 | 2023-11  | Envison Digital | Algorithm Engineer   |
 
 ## Education
 <!-- 
@@ -84,4 +85,4 @@ sequenceDiagrams:
 - Medium and long term electricity price forecasting method, device, storage medium and electronic device
 
 ## Paper
-- 1
+- ...
