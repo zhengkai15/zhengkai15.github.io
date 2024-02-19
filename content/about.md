@@ -41,4 +41,4 @@ sequenceDiagrams:
 
 ---
 
-Hugo is a static site engine written in Go.
+...
