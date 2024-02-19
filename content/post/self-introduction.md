@@ -1,13 +1,13 @@
 ---
 title: "Self-introduction"
-date: 2024-02-18T20:40:45+08:00
-lastmod: 2024-02-18T20:40:45+08:00
+date: 2024-01-17T20:40:45+08:00
+lastmod: 2024-01-17T20:40:45+08:00
 draft: false
 keywords: []
 description: ""
-tags: []
-categories: []
-author: ""
+tags: ["Self-introduction"]
+categories: ["Self-introduction"]
+author: "kaizheng"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
@@ -43,3 +43,4 @@ sequenceDiagrams:
 - 🌻 I’m currently working on **Vision-Language Cooperative Representation** and **Multi-Modalities Learning**.
 - 🤔 I’m currently learning on **Transformer** and **Diffusion**.
 - 😀 I’m currently learning on **Large model of weather forecast** and **SR**.
+- 

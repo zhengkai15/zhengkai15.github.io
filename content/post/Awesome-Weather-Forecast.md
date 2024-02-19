@@ -1,13 +1,12 @@
 ---
-title: "About"
-date: 2024-01-18T21:38:52+08:00
-lastmod: 2024-01-18T21:41:52+08:00
-menu: "main"
-weight: 50
+title: "Awesome-Weather-Forecast"
+date: 2024-01-17T20:40:45+08:00
+lastmod: 2024-01-17T20:40:45+08:00
+draft: false
 keywords: []
 description: ""
-tags: []
-categories: []
+tags: ["Algorithm"]
+categories: ["Algorithm"]
 author: "kaizheng"
 
 # You can also close(false) or open(true) something for this content.
@@ -16,7 +15,7 @@ comment: false
 toc: false
 autoCollapseToc: false
 postMetaInFooter: false
-hiddenFromHomePage: true
+hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: false
 reward: false
@@ -35,10 +34,8 @@ flowchartDiagrams:
   enable: false
   options: ""
 
-sequenceDiagrams: 
+sequenceDiagrams:
   enable: false
   options: ""
 
 ---
-
-Hugo is a static site engine written in Go.
