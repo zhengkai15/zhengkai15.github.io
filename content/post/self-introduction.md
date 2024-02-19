@@ -1,5 +1,5 @@
 ---
-title: "Self-Introduction"
+title: "Self-introduction"
 date: 2024-02-18T20:40:45+08:00
 lastmod: 2024-02-18T20:40:45+08:00
 draft: false
