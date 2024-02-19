@@ -41,3 +41,34 @@ sequenceDiagrams:
 ---
 
 [[Awesome-Weather-Forecast](https://github.com/zhengkai15/Awesome-Weather-Forecast)]:An algorithm that automatically obtains data from a remote server on a regular basis, automatically loads models and makes forecasts.
+
+<div align=left>
+
+## *To Do*
+* - [x] Create [**⏳Recently Focused Papers**](https://github.com/zhengkai15/Awesome-Weather-Forecast/blob/main/%E2%8F%B3Recently%20Focused%20Papers.md)
+
+## *Content*
+* *Medium Range*:
+  * ⭐(Nature 2023) *FuXi*, chen2023fuxi et al. [[Paper](https://www.nature.com/articles/s41612-023-00512-1)]
+    * 🍬 FuXi: ***the first*** : A cascade machine learning forecasting system for 15-day global weather forecast.
+  * ⭐(Nature 2023) *Pangu*,[[Paper](https://www.nature.com/articles/s41586-023-06185-3)]
+    * 🍬 Pangu: ***the first*** : Accurate medium-range global weather forecasting with 3D neural networks.
+  * ⭐(Science 2023) *GraphCast*, [[Paper](https://www.science.org/doi/10.1126/science.adi2336)]
+    * 🍬 GraphCast: ***the first*** : Learning skillful medium-range global weather forecasting.
+  * 
+* *NowCasting*:
+  * *Precipitation*:
+    * ⭐(Nature 2023) *NowcastNet*, [[Paper](https://www.nature.com/articles/s41586-023-06184-4)]
+      * 🍬 NowcastNet: ***the first*** : Skilful nowcasting of extreme precipitation with NowcastNet
+    * ⭐(Nature 2023) *Corrformer*, [[Paper](https://www.nature.com/articles/s42256-023-00667-9)]
+      * 🍬 Corrformer: ***the first*** : Interpretable weather forecasting for worldwide stations with a unified deep model
+* *Seasonal*:
+  * ⭐(Arxiv preprint 2023) *S2S*, [[Paper](https://arxiv.org/abs/2312.09926)]
+* *Climate*:
+  * 
+* *Extreme*:
+  * Typhoon:
+  * 
+* *SR*:
+  * ⭐(RMetS 2023) *Uformer* [[Paper](https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.4596)]
+  * 🍬 Uformer : Investigating transformer-based models for spatial downscaling and correcting biases of near-surface temperature and wind-speed forecasts.

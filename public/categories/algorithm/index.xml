@@ -13,7 +13,7 @@
       <link>http://localhost:1313/post/awesome-weather-forecast/</link>
       <pubDate>Wed, 17 Jan 2024 20:40:45 +0800</pubDate>
       <guid>http://localhost:1313/post/awesome-weather-forecast/</guid>
-      <description>[Awesome-Weather-Forecast]:An algorithm that automatically obtains data from a remote server on a regular basis, automatically loads models and makes forecasts.</description>
+      <description>[Awesome-Weather-Forecast]:An algorithm that automatically obtains data from a remote server on a regular basis, automatically loads models and makes forecasts.&#xA;To Do Create ⏳Recently Focused Papers Content Medium Range: ⭐(Nature 2023) FuXi, chen2023fuxi et al. [Paper] 🍬 FuXi: the first : A cascade machine learning forecasting system for 15-day global weather forecast. ⭐(Nature 2023) Pangu,[Paper] 🍬 Pangu: the first : Accurate medium-range global weather forecasting with 3D neural networks. ⭐(Science 2023) GraphCast, [Paper] 🍬 GraphCast: the first : Learning skillful medium-range global weather forecasting.</description>
     </item>
   </channel>
 </rss>
