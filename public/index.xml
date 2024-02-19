@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 18 Feb 2024 20:40:45 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Demo</title>
-      <link>http://localhost:1313/post/demo/</link>
+      <title>Self-Introduction</title>
+      <link>http://localhost:1313/post/self-introduction/</link>
       <pubDate>Sun, 18 Feb 2024 20:40:45 +0800</pubDate>
-      <guid>http://localhost:1313/post/demo/</guid>
-      <description></description>
+      <guid>http://localhost:1313/post/self-introduction/</guid>
+      <description> 🌻 I’m currently working on Vision-Language Cooperative Representation and Multi-Modalities Learning. 🤔 I’m currently learning on Transformer and Diffusion. 😀 I’m currently learning on Large model of weather forecast and SR. </description>
     </item>
   </channel>
 </rss>
