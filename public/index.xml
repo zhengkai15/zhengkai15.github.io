@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 18 Feb 2024 20:40:45 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>http://localhost:1313/post/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <guid>http://localhost:1313/post/about/</guid>
+      <description>Hugo is a static site engine written in Go.&#xA;It makes use of a variety of open source projects including:&#xA;Cobra Viper J Walter Weatherman Cast Learn more and contribute on GitHub.</description>
+    </item>
+    <item>
       <title>Self-Introduction</title>
       <link>http://localhost:1313/post/self-introduction/</link>
       <pubDate>Sun, 18 Feb 2024 20:40:45 +0800</pubDate>
