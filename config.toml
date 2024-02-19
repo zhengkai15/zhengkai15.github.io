@@ -184,10 +184,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   [params.social]                                         # 社交链接
     a-email = "mailto:kaizheng.work@email.com"
     g-github = "https://github.com/zhengkai15"
-    i-zhihu = "http://localhost:1313"
-    m-instagram = "http://localhost:1313"
-    n-gitlab = "http://localhost:1313"
-    o-bilibili = "http://localhost:1313"
+    i-zhihu = "https://zhengkai15.github.io/"
+    m-instagram = "https://zhengkai15.github.io/"
+    n-gitlab = "https://zhengkai15.github.io/"
+    o-bilibili = "https://zhengkai15.github.io/"
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
