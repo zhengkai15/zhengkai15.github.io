@@ -39,8 +39,49 @@ sequenceDiagrams:
   options: ""
 
 ---
+<!-- --> 
 
-- 🌻 I’m currently working on **Vision-Language Cooperative Representation** and **Multi-Modalities Learning**.
-- 🤔 I’m currently learning on **Transformer** and **Diffusion**.
-- 😀 I’m currently learning on **Large model of weather forecast** and **SR**.
-- 
+## What I'm working now?
+- 🌻 I’m currently learning on **Vision-Language Cooperative Representation** and **Multi-Modalities Learning**.
+- 🤔 I’m currently working on **Transformer** and **Diffusion**.
+- 😀 I’m currently working on **Large model of weather forecast** and **SR**.
+
+## Project
+- 🚀 SR(Super Resolution) on Precipitation
+- 🌱 Data driven Climate Data Assimilation
+- 🚀 Cryosphere Large Language Model
+- 🐱‍ Image and Video Generation
+
+## Work Experience
+<!-- 
+- 👨‍💻‍ 2023-11 Now     SAIS             Algorithm Researcher
+- 👨‍💻‍ 2022-01 2023-11 Envison Digital  Algorithm Engineer
+-->
+|      | Start   | End     | Employer        | Position              |
+|------|---------|---------|-----------------|-----------------------|
+| - 👨‍💻‍ | 2023-11 | Now     | SAIS            | Algorithm Researcher  |
+| - 👨‍💻‍ | 2022-01 | 2023-11 | Envison Digital | Algorithm Engineer    |
+
+***REMOVED***
+<!-- 
+***REMOVED***
+***REMOVED***
+--> 
+|      | Start   | End     | School             | Major              |
+|------|---------|---------|--------------------|--------------------|
+| - 👨‍🎓‍ | 2019-09 | 2022-06 |  |   |
+| - 👨‍🎓‍ | 2016-09 | 2018-06 |  |  |
+| - 👨‍🎓‍ | 2015-09 | 2019-06 |  |  |
+
+## Programming language
+- 🏹 Python C Matlab Linux NCL Fortran C++
+
+## Hornors
+- [[TianChi:Science Intelligent Atmospheric Science Track](https://tianchi.aliyun.com/competition/entrance/532111/information)]: Top3 in Preliminary contest
+- University-level first-class scholarship
+
+## Patent
+- Medium and long term electricity price forecasting method, device, storage medium and electronic device
+
+## Paper
+- 1
