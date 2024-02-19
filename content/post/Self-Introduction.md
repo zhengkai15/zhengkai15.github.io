@@ -1,5 +1,5 @@
 ---
-title: "Demo"
+title: "Self-Introduction"
 date: 2024-02-18T20:40:45+08:00
 lastmod: 2024-02-18T20:40:45+08:00
 draft: true
@@ -40,4 +40,6 @@ sequenceDiagrams:
 
 ---
 
-<!--more-->
+- 🌻 I’m currently working on **Vision-Language Cooperative Representation** and **Multi-Modalities Learning**.
+- 🤔 I’m currently learning on **Transformer** and **Diffusion**.
+- 😀 I’m currently learning on **Large model of weather forecast** and **SR**.
