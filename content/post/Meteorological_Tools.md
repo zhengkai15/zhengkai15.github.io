@@ -119,13 +119,28 @@ done
 </details>
 
 ## 2 气象相关工具总结
-<details> <summary> 2.1 </summary>
+<details> <summary> 2.1 可视化工具 </summary>
 
+### 2.1 可视化工具
+- [[Panoply](https://www.giss.nasa.gov/tools/panoply/)]
 </details>
 
 ## 3 气象数据网站总结
-<details> <summary> 3.1 </summary>
+<details> <summary> 3.1 开源数据下载网站 </summary>
 
+### 3.1 开源数据下载网站
+- [[ERA5](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)]
+- [[GPCG](http://gpcp.umd.edu/)]
+- [[CMC](http://data.cma.cn/data/cdcindex/cid/f0fb4b55508804ca.html)]
+- [[ECMWF Forecast](https://apps.ecmwf.int/webmars/joblist/)]
+- [[CMORPH](https://www.ncei.noaa.gov/products/climate-data-records/precipitation-cmorph)]
+- [[GPCP](http://gpcp.umd.edu/)]
+- [[CMAP](https://psl.noaa.gov/data/gridded/data.cmap.html)]
+- [[GHCN](https://www.ncei.noaa.gov/products/land-based-station)]
+- [[GRU](https://link.zhihu.com/?target=https%3A//crudata.uea.ac.uk/cru/data/hrg/)]
+- [[GMP](https://gpm.nasa.gov/missions/GPM)]
+- [[TRMM](https://disc.gsfc.nasa.gov/datasets/TRMM_3B42_Daily_7/summary)]
 </details>
 
 [//]: # (经验帖 &#40;https://typonotes.com/posts/2022/12/26/hugo-render-markdown-image-url/&#41;)
+
