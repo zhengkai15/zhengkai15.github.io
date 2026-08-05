@@ -28,11 +28,6 @@ Hi, I'm **Kai Zheng**, an Algorithm Engineer passionate about **AI for Science**
 - 🌦️ Senior Algorithm Researcher — video prediction foundation models, multimodal generation, AI4Science
 - ⚡ Algorithm Engineer — time-series forecasting, renewable energy & power trading
 
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-
 ## Contact
 
 - 📧 Email: kaizheng.work@gmail.com
