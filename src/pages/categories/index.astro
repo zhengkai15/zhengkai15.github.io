@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('post', ({ data }) => !data.draft);
+
+// 统计每个分类的文章数
+const categoryCounts = new Map<string, number>();
+allPosts.forEach((p) => {
+  const c = p.data.categories;
+  categoryCounts.set(c, (categoryCounts.get(c) ?? 0) + 1);
+});
+
+const categories = Array.from(categoryCounts.entries()).sort((a, b) => b[1] - a[1]);
+
+const CATEGORY_LABELS: Record<string, string> = {
+  'AI4Science': 'AI for Science · 气象大模型、数据同化、气候 AI',
+  'LLM-Data': 'LLM 数据工程 · 数据飞轮、代码智能',
+  'Multimodal': '多模态生成 · CLIP、视频预测、Diffusion',
+  'Engineering': '工程实践 · 推理部署、分布式训练、踩坑',
+  'Paper-Notes': '论文精读',
+};
+---
+
+<BaseLayout title="Categories" description="文章分类">
+  <div class="mx-auto max-w-3xl">
+    <header class="mb-8">
+      <h1 class="text-2xl font-semibold">Categories</h1>
+    </header>
+
+    <div class="flex flex-col divide-y" style="border-color: var(--border);">
+      {
+        categories.map(([category, count]) => (
+          <a href={`/categories/${category}/`} class="group flex items-center justify-between py-4">
+            <div>
+              <div class="font-medium transition-colors group-hover:text-[var(--accent-strong)]">
+                {category}
+              </div>
+              <div class="text-sm" style="color: var(--text-muted);">
+                {CATEGORY_LABELS[category] ?? ''}
+              </div>
+            </div>
+            <span class="text-sm tabular-nums" style="color: var(--text-muted);">{count} 篇</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

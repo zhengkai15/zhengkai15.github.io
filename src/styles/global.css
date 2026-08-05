@@ -1,0 +1,239 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* 站点 CSS 变量：亮/暗两套，通过 html[data-theme] 切换 */
+:root {
+  --accent: #1d9e75;
+  --accent-strong: #0f6e56;
+  --surface: #ffffff;
+  --surface-muted: #f6f6f4;
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --border: #e5e5e0;
+}
+
+html[data-theme='dark'] {
+  --accent: #5dcaa5;
+  --accent-strong: #9fe1cb;
+  --surface: #171717;
+  --surface-muted: #1f1f1f;
+  --text: #ececec;
+  --text-muted: #a3a3a3;
+  --border: #2e2e2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* 文章正文排版 */
+.prose {
+  max-width: 46rem;
+  font-size: 1.0625rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  scroll-margin-top: 5rem;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+}
+
+.prose p {
+  margin: 1em 0;
+}
+
+.prose a {
+  color: var(--accent-strong);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  transition: border-color 0.15s ease;
+}
+
+.prose a:hover {
+  border-bottom-color: var(--accent-strong);
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.5em 0;
+  color: var(--text-muted);
+}
+
+.prose ul,
+.prose ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.prose ul {
+  list-style: disc;
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose li {
+  margin: 0.4em 0;
+}
+
+.prose li::marker {
+  color: var(--accent);
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5em 0;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5em auto;
+  display: block;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.9375rem;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+.prose th {
+  background: var(--surface-muted);
+  font-weight: 600;
+}
+
+.prose code:not([class]) {
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.prose details {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1.25em 0;
+  background: var(--surface-muted);
+}
+
+.prose summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* 代码高亮（astro-expressive-code 自带样式，这里兜底） */
+.expressive-code {
+  margin: 1.5em 0;
+}
+
+.expressive-code pre {
+  border-radius: 10px;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* 目录 */
+.toc {
+  position: sticky;
+  top: 5.5rem;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+  font-size: 0.8125rem;
+}
+
+.toc a {
+  display: block;
+  padding: 0.25rem 0;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+  transition: all 0.15s ease;
+}
+
+.toc a:hover,
+.toc a.active {
+  color: var(--accent-strong);
+  border-left-color: var(--accent);
+}
+
+.toc a.toc-h3 {
+  padding-left: 1.5rem;
+}
+
+/* 滚动返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 40;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  color: var(--accent-strong);
+  border-color: var(--accent);
+}

@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('post', ({ data }) => !data.draft);
+
+const tagCounts = new Map<string, number>();
+allPosts.forEach((p) => {
+  p.data.tags.forEach((t) => tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1));
+});
+
+const tags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
+---
+
+<BaseLayout title="Tags" description="文章标签">
+  <div class="mx-auto max-w-3xl">
+    <header class="mb-8">
+      <h1 class="text-2xl font-semibold">Tags</h1>
+    </header>
+
+    <div class="flex flex-wrap gap-2.5">
+      {
+        tags.map(([tag, count]) => (
+          <a
+            href={`/tags/${tag}/`}
+            class="rounded-full border px-3.5 py-1.5 text-sm transition-colors"
+            style="border-color: var(--border);"
+          >
+            #{tag}
+            <span class="ml-1 text-xs" style="color: var(--text-muted);">{count}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import ListLayout from '../../../layouts/ListLayout.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('post', ({ data }) => !data.draft);
+  const PAGE_SIZE = 10;
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+
+  return Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => ({
+    params: { page: String(page) },
+    props: { page, totalPages },
+  }));
+}
+
+const { page, totalPages } = Astro.props;
+const allPosts = (await getCollection('post', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const PAGE_SIZE = 10;
+const pagePosts = allPosts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+---
+
+<ListLayout
+  title={`Posts · 第 ${page} 页`}
+  description={`全部文章 · 第 ${page} / ${totalPages} 页`}
+  posts={pagePosts}
+  currentPage={page}
+  totalPages={totalPages}
+/>

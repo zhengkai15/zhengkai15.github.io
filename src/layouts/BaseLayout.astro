@@ -1,0 +1,253 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = 'Kai Zheng | AI4Science',
+  description = 'Kai Zheng - Algorithm Engineer focusing on AI for Science, Weather Forecasting Foundation Models, and Multimodal Generation',
+  image = 'https://avatars.githubusercontent.com/u/59335385?v=4',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteTitle = 'Kai Zheng | AI4Science';
+const rssLink = '/rss.xml';
+---
+
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === siteTitle ? title : `${title} · ${siteTitle}`}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Kai Zheng" />
+    <meta name="keywords" content="Kai Zheng, AI4Science, Weather Forecasting, Foundation Model, Diffusion, Multimodal" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="Kai Zheng | AI4Science" href={rssLink} />
+
+    <script is:inline>
+      // 防 FOUC：在首帧渲染前根据 localStorage 设置主题
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    <!-- 无第三方样式依赖，搜索 UI 为自定义渲染 -->
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 border-b" style="background: color-mix(in srgb, var(--surface) 85%, transparent); backdrop-filter: blur(8px); border-color: var(--border);">
+      <nav class="mx-auto flex h-14 max-w-4xl items-center justify-between px-4">
+        <a href="/" class="flex items-center gap-2 font-medium no-underline" style="color: var(--text);">
+          <img src="https://avatars.githubusercontent.com/u/59335385?v=4" alt="" width="28" height="28" class="rounded-full" />
+          <span class="hidden sm:inline">Kai Zheng</span>
+        </a>
+
+        <div class="flex items-center gap-1 text-sm" style="color: var(--text-muted);">
+          <a href="/" class="px-3 py-1.5 rounded-md transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text)]">Home</a>
+          <a href="/post/" class="px-3 py-1.5 rounded-md transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text)]">Posts</a>
+          <a href="/categories/" class="px-3 py-1.5 rounded-md transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text)]">Categories</a>
+          <a href="/about/" class="px-3 py-1.5 rounded-md transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text)]">About</a>
+
+          <button id="search-btn" type="button" aria-label="搜索" title="搜索 (/)"
+            class="ml-2 flex h-8 w-8 items-center justify-center rounded-md border transition-colors"
+            style="border-color: var(--border); color: var(--text-muted);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <button id="theme-toggle" type="button" aria-label="切换主题" title="切换主题"
+            class="ml-1 flex h-8 w-8 items-center justify-center rounded-md border transition-colors"
+            style="border-color: var(--border); color: var(--text-muted);">
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- 搜索弹层 -->
+      <div id="search-dialog" class="hidden fixed inset-0 z-50 flex items-start justify-center pt-24 px-4"
+        style="background: rgba(0,0,0,0.4);">
+        <div class="w-full max-w-xl rounded-xl border p-4" style="background: var(--surface); border-color: var(--border);">
+          <div class="mb-3 flex items-center justify-between">
+            <span class="text-sm font-medium" style="color: var(--text);">搜索文章</span>
+            <button id="search-close" class="text-sm" style="color: var(--text-muted);">关闭 (Esc)</button>
+          </div>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="输入关键词搜索…"
+            autocomplete="off"
+            class="w-full rounded-lg border px-3.5 py-2.5 text-sm outline-none focus:ring-2 transition-shadow"
+            style="border-color: var(--border); background: var(--surface-muted); color: var(--text);"
+          />
+          <div id="search-results" class="mt-3 flex flex-col max-h-80 overflow-y-auto"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="border-t py-6 text-center text-sm" style="border-color: var(--border); color: var(--text-muted);">
+      <div class="mx-auto max-w-4xl px-4">
+        <p>© {new Date().getFullYear()} Kai Zheng · AI4Science</p>
+        <p class="mt-1 text-xs">
+          <a href="https://github.com/zhengkai15" class="hover:underline">GitHub</a>
+          <span class="mx-1">·</span>
+          <a href="mailto:kaizheng.work@gmail.com" class="hover:underline">Email</a>
+          <span class="mx-1">·</span>
+          <a href={rssLink} class="hover:underline">RSS</a>
+        </p>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="返回顶部">↑</button>
+
+    <!-- 搜索初始化 -->
+    <script>
+      // 主题切换
+      const toggleBtn = document.getElementById('theme-toggle');
+      const moon = document.getElementById('icon-moon');
+      const sun = document.getElementById('icon-sun');
+      const root = document.documentElement;
+
+      function syncIcons() {
+        const dark = root.getAttribute('data-theme') === 'dark';
+        moon?.classList.toggle('hidden', dark);
+        sun?.classList.toggle('hidden', !dark);
+      }
+
+      toggleBtn?.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        syncIcons();
+      });
+      syncIcons();
+
+      // 返回顶部
+      const backTop = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        backTop?.classList.toggle('visible', window.scrollY > 400);
+      });
+      backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // 搜索（pagefind 底层 API，自定义 UI）
+      const searchBtn = document.getElementById('search-btn');
+      const searchDialog = document.getElementById('search-dialog');
+      const searchClose = document.getElementById('search-close');
+      const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+      const searchResults = document.getElementById('search-results');
+
+      let pagefindModule: any = null;
+      let searchReady = false;
+
+      function ensurePagefind(): Promise<boolean> {
+        if (searchReady) return Promise.resolve(true);
+        if (pagefindModule) return Promise.resolve(true);
+        return new Promise((resolve) => {
+          const s = document.createElement('script');
+          s.src = '/pagefind/pagefind.js';
+          s.async = true;
+          s.onload = () => {
+            pagefindModule = (window as any).pagefind;
+            searchReady = true;
+            resolve(true);
+          };
+          s.onerror = () => resolve(false);
+          document.head.appendChild(s);
+        });
+      }
+
+      async function doSearch(query: string) {
+        if (!searchResults) return;
+        if (!query.trim()) {
+          searchResults.innerHTML = '';
+          return;
+        }
+        const ok = await ensurePagefind();
+        if (!ok) {
+          searchResults.innerHTML = '<p class="py-4 text-sm" style="color: var(--text-muted);">搜索索引未加载，请先构建 pagefind。</p>';
+          return;
+        }
+        const result = await pagefindModule.search(query);
+        const items = await Promise.all(result.results.slice(0, 10).map((r: any) => r.data()));
+
+        if (items.length === 0) {
+          searchResults.innerHTML = '<p class="py-4 text-sm" style="color: var(--text-muted);">没有匹配结果。</p>';
+          return;
+        }
+
+        searchResults.innerHTML = items
+          .map(
+            (item: any) => `
+            <a href="${item.url}" class="block rounded-lg px-3 py-2.5 transition-colors hover:bg-[var(--surface-muted)]">
+              <div class="text-sm font-medium" style="color: var(--text);">${item.title}</div>
+              <div class="mt-0.5 text-xs leading-relaxed" style="color: var(--text-muted);">${item.excerpt}</div>
+            </a>`
+          )
+          .join('');
+      }
+
+      let searchTimer: ReturnType<typeof setTimeout> | null = null;
+      searchInput?.addEventListener('input', () => {
+        if (searchTimer) clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => doSearch(searchInput.value), 250);
+      });
+
+      function openSearch() {
+        searchDialog?.classList.remove('hidden');
+        ensurePagefind();
+        setTimeout(() => searchInput?.focus(), 50);
+      }
+
+      function closeSearch() {
+        searchDialog?.classList.add('hidden');
+      }
+
+      searchBtn?.addEventListener('click', openSearch);
+      searchClose?.addEventListener('click', closeSearch);
+      searchDialog?.addEventListener('click', (e: Event) => {
+        if (e.target === searchDialog) closeSearch();
+      });
+      document.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Escape') closeSearch();
+        if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey && document.activeElement?.tagName !== 'INPUT') {
+          e.preventDefault();
+          openSearch();
+        }
+      });
+    </script>
+  </body>
+</html>

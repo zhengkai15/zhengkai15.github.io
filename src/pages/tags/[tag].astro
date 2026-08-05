@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import ListLayout from '../../layouts/ListLayout.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('post', ({ data }) => !data.draft);
+  const tags = new Set(allPosts.flatMap((p) => p.data.tags));
+  return Array.from(tags).map((tag) => ({ params: { tag } }));
+}
+
+const { tag } = Astro.props;
+const posts = (await getCollection('post', ({ data }) => !data.draft && data.tags.includes(tag))).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<ListLayout
+  title={`标签：#${tag}`}
+  description={`${posts.length} 篇文章`}
+  posts={posts}
+/>

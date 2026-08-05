@@ -1,0 +1,31 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('post', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'post'>;
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+// 上下篇（按日期排序）
+const allPosts = (await getCollection('post', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const idx = allPosts.findIndex((p) => p.id === post.id);
+const prev = idx < allPosts.length - 1 ? allPosts[idx + 1] : null; // 更早的一篇
+const next = idx > 0 ? allPosts[idx - 1] : null; // 更新的一篇
+---
+
+<PostLayout post={post} headings={headings} prev={prev} next={next}>
+  <Content />
+</PostLayout>

@@ -1,5 +1,12 @@
-# Hugo 构建产物
-public/
+# 构建产物
+dist/
+node_modules/
+.astro/
+
+# 临时文件
+_tmp_*
+
+# Hugo 遗留（本地缓存）
 resources/
 .hugo_build.lock
 

@@ -1,0 +1,146 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'post'>;
+  headings?: { depth: number; slug: string; text: string }[];
+  prev?: CollectionEntry<'post'> | null;
+  next?: CollectionEntry<'post'> | null;
+}
+
+const { post, headings = [], prev = null, next = null } = Astro.props;
+
+const readingTime = Math.max(1, Math.ceil(post.body.length / 800));
+const formattedDate = post.data.date.toLocaleDateString('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const CATEGORY_LABELS: Record<string, string> = {
+  'AI4Science': 'AI for Science',
+  'LLM-Data': 'LLM 数据工程',
+  'Multimodal': '多模态生成',
+  'Engineering': '工程实践',
+  'Paper-Notes': '论文精读',
+};
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="mx-auto max-w-3xl">
+    <!-- 面包屑 -->
+    <nav class="mb-4 text-sm" style="color: var(--text-muted);">
+      <a href="/" class="hover:underline">Home</a>
+      <span class="mx-1">/</span>
+      <a href="/post/" class="hover:underline">Posts</a>
+      <span class="mx-1">/</span>
+      <a href={`/categories/${post.data.categories}/`} class="hover:underline">
+        {CATEGORY_LABELS[post.data.categories] ?? post.data.categories}
+      </a>
+    </nav>
+
+    <header class="mb-8">
+      <h1 class="text-3xl font-semibold leading-snug">{post.data.title}</h1>
+      <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm" style="color: var(--text-muted);">
+        <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
+        <span>·</span>
+        <span>{readingTime} 分钟</span>
+        <span>·</span>
+        <span>{post.body.split(/\s+/).filter(Boolean).length} 字</span>
+        <div class="flex flex-wrap gap-2">
+          {
+            post.data.tags.map((tag) => (
+              <a
+                href={`/tags/${tag}/`}
+                class="rounded-full border px-2.5 py-0.5 text-xs transition-colors"
+                style="border-color: var(--border); color: var(--text-muted);"
+              >
+                #{tag}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </header>
+
+    <div class="flex flex-col gap-10 md:flex-row md:gap-12">
+      <!-- 正文 -->
+      <div class="prose min-w-0 flex-1">
+        <slot />
+      </div>
+
+      <!-- 目录 -->
+      {
+        headings.length > 0 && (
+          <aside class="toc hidden md:block md:w-56 shrink-0">
+            <div class="mb-2 text-xs font-medium uppercase tracking-wide" style="color: var(--text-muted);">
+              目录
+            </div>
+            <nav id="post-toc">
+              {
+                headings.map((h) => (
+                  <a href={`#${h.slug}`} class={h.depth === 3 ? 'toc-h3' : ''}>
+                    {h.text}
+                  </a>
+                ))
+              }
+            </nav>
+          </aside>
+        )
+      }
+    </div>
+
+    <!-- 上下篇导航 -->
+    <nav class="mt-12 grid grid-cols-2 gap-4 border-t pt-6" style="border-color: var(--border);">
+      <div>
+        {
+          prev && (
+            <a href={`/post/${prev.id}/`} class="group block text-sm">
+              <div class="mb-1" style="color: var(--text-muted);">← 上一篇</div>
+              <div class="font-medium transition-colors group-hover:text-[var(--accent-strong)]" style="color: var(--text);">
+                {prev.data.title}
+              </div>
+            </a>
+          )
+        }
+      </div>
+      <div class="text-right">
+        {
+          next && (
+            <a href={`/post/${next.id}/`} class="group block text-sm">
+              <div class="mb-1" style="color: var(--text-muted);">下一篇 →</div>
+              <div class="font-medium transition-colors group-hover:text-[var(--accent-strong)]" style="color: var(--text);">
+                {next.data.title}
+              </div>
+            </a>
+          )
+        }
+      </div>
+    </nav>
+  </article>
+
+  <!-- TOC 滚动高亮 -->
+  <script>
+    const tocLinks = document.querySelectorAll('#post-toc a');
+    const headings = Array.from(tocLinks).map((a) => {
+      const id = a.getAttribute('href')?.slice(1) ?? '';
+      return { el: a, target: document.getElementById(id) };
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const link = headings.find((h) => h.target === entry.target)?.el;
+            tocLinks.forEach((a) => a.classList.remove('active'));
+            link?.classList.add('active');
+          }
+        });
+      },
+      { rootMargin: '-80px 0px -70% 0px' }
+    );
+
+    headings.forEach((h) => h.target && observer.observe(h.target));
+  </script>
+</BaseLayout>
