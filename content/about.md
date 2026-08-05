@@ -10,9 +10,7 @@ categories: ["About"]
 author: "kaizheng"
 ---
 
-Hi, I'm **Kai Zheng**, an Algorithm Engineer passionate about **AI for Science**, currently working on large model development at Ant Group, focusing on code intelligence and data flywheel.
-
-Previously, I was a Senior Algorithm Researcher at Shanghai Academy of Artificial Intelligence for Science (SAIS), working on video prediction foundation models, multimodal generation, and AI4Science.
+Hi, I'm **Kai Zheng**, an Algorithm Engineer passionate about **AI for Science**. My work spans large model development (code intelligence, LLM data flywheel), video prediction foundation models, multimodal generation, and weather/climate AI.
 
 ## Research Interests
 
@@ -31,11 +29,9 @@ Previously, I was a Senior Algorithm Researcher at Shanghai Academy of Artificia
 
 ## Experience
 
-| Period | Company | Role |
-|--------|---------|------|
-| 2026.06 - Now | Ant Group (蚂蚁集团) | LLM Development Engineer |
-| 2023.11 - 2026.06 | SAIS (上海科学智能研究院) | Senior Algorithm Researcher |
-| 2022.01 - 2023.11 | Envision Digital (远景科创) | Algorithm Engineer |
+- 🧠 Large Model Development — code intelligence & data flywheel
+- 🌦️ Senior Algorithm Researcher — video prediction foundation models, multimodal generation, AI4Science
+- ⚡ Algorithm Engineer — time-series forecasting, renewable energy & power trading
 
 ***REMOVED***
 

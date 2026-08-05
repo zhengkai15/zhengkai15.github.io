@@ -70,7 +70,7 @@ paginate = 10
   [params.profileMode]
     enabled = true
     title = "Kai Zheng"
-    subtitle = "Algorithm Engineer · AI for Science<br>Weather Forecasting Foundation Models · Diffusion · Multimodal<br>上海科学智能研究院 前资深算法研究员 | 现蚂蚁集团 大模型开发工程师"
+    subtitle = "Algorithm Engineer · AI for Science<br>Weather Forecasting Foundation Models · Diffusion · Multimodal<br>LLM Data Engineering · Generative Models · RL Post-training"
     imageUrl = "https://avatars.githubusercontent.com/u/59335385?v=4"
     imageWidth = 180
     imageHeight = 180
