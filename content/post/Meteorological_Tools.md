@@ -1,43 +1,13 @@
 ---
 title: "Meteorological_Tools"
 date: 2024-02-20T08:40:45+08:00
-lastmod: 2024-02-20T08:40:45+08:00
-draft: false
-keywords: []
-description: ""
-tags: ["Algorithm"]
-categories: ["Algorithm"]
+lastmod: 2026-08-05T00:00:00+08:00
+draft: true
+keywords: ["meteorology", "tools", "ChatGPT"]
+description: "气象科研工具与数据资源总结（待补齐）"
+tags: ["Engineering", "Meteorology"]
+categories: ["Engineering"]
 author: "kaizheng"
-
-# You can also close(false) or open(true) something for this content.
-# P.S. comment can only be closed
-comment: false
-toc: false
-autoCollapseToc: false
-postMetaInFooter: false
-hiddenFromHomePage: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
-reward: false
-mathjax: false
-mathjaxEnableSingleDollar: false
-mathjaxEnableAutoNumber: false
-
-# You unlisted posts you might want not want the header or footer to show
-hideHeaderAndFooter: false
-
-# You can enable or disable out-of-date content warning for individual posts.
-# Comment this out to use the global config.
-#enableOutdatedInfoWarning: false
-
-flowchartDiagrams:
-  enable: false
-  options: ""
-
-sequenceDiagrams: 
-  enable: false
-  options: ""
-
 ---
 <!-- -->
 ## 1 ChatGPT助力科研
@@ -45,7 +15,7 @@ sequenceDiagrams:
 
 ### 1.1 绝对湿度相对湿度转换
 #### 1.1.1概述
-博主近期在运行[[盘古气象大模型](https://arxiv.org/pdf/2211.02556.pdf)]，使用[[ERA5数据](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)]作为输入。
+博主近期在运行[盘古气象大模型](https://arxiv.org/pdf/2211.02556.pdf)，使用[ERA5数据](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)作为输入。
 但是发现下载错了变量，误将绝对下载成了相对湿度。因此，博主使用ChatGPT获得了转换公式。
 #### 1.1.2使用过程
 - **Prompt**：
@@ -122,24 +92,24 @@ done
 <details> <summary> 2.1 可视化工具 </summary>
 
 ### 2.1 可视化工具
-- [[Panoply](https://www.giss.nasa.gov/tools/panoply/)]
+- [Panoply](https://www.giss.nasa.gov/tools/panoply/)
 </details>
 
 ## 3 气象数据网站总结
 <details> <summary> 3.1 开源数据下载网站 </summary>
 
 ### 3.1 开源数据下载网站
-- [[ERA5](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)]
-- [[GPCG](http://gpcp.umd.edu/)]
-- [[CMC](http://data.cma.cn/data/cdcindex/cid/f0fb4b55508804ca.html)]
-- [[ECMWF Forecast](https://apps.ecmwf.int/webmars/joblist/)]
-- [[CMORPH](https://www.ncei.noaa.gov/products/climate-data-records/precipitation-cmorph)]
-- [[GPCP](http://gpcp.umd.edu/)]
-- [[CMAP](https://psl.noaa.gov/data/gridded/data.cmap.html)]
-- [[GHCN](https://www.ncei.noaa.gov/products/land-based-station)]
-- [[GRU](https://link.zhihu.com/?target=https%3A//crudata.uea.ac.uk/cru/data/hrg/)]
-- [[GMP](https://gpm.nasa.gov/missions/GPM)]
-- [[TRMM](https://disc.gsfc.nasa.gov/datasets/TRMM_3B42_Daily_7/summary)]
+- [ERA5](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)
+- [GPCG](http://gpcp.umd.edu/)
+- [CMC](http://data.cma.cn/data/cdcindex/cid/f0fb4b55508804ca.html)
+- [ECMWF Forecast](https://apps.ecmwf.int/webmars/joblist/)
+- [CMORPH](https://www.ncei.noaa.gov/products/climate-data-records/precipitation-cmorph)
+- [GPCP](http://gpcp.umd.edu/)
+- [CMAP](https://psl.noaa.gov/data/gridded/data.cmap.html)
+- [GHCN](https://www.ncei.noaa.gov/products/land-based-station)
+- [GRU](https://link.zhihu.com/?target=https%3A//crudata.uea.ac.uk/cru/data/hrg/)
+- [GMP](https://gpm.nasa.gov/missions/GPM)
+- [TRMM](https://disc.gsfc.nasa.gov/datasets/TRMM_3B42_Daily_7/summary)
 </details>
 
 [//]: # (经验帖 &#40;https://typonotes.com/posts/2022/12/26/hugo-render-markdown-image-url/&#41;)
