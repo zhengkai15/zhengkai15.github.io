@@ -5,8 +5,6 @@ lastmod: 2026-08-05T00:00:00+08:00
 draft: false
 keywords: ["Kai Zheng", "AI4Science", "Weather Forecasting"]
 description: "About Kai Zheng - Algorithm Engineer focusing on AI for Science"
-tags: ["About"]
-categories: ["About"]
 author: "kaizheng"
 ---
 
