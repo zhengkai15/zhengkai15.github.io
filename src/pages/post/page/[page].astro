@@ -1,9 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../../../lib/posts';
 import ListLayout from '../../../layouts/ListLayout.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('post', ({ data }) => !data.draft);
+  const allPosts = await getPublishedPosts();
   const PAGE_SIZE = 10;
   const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
 
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { page, totalPages } = Astro.props;
-const allPosts = (await getCollection('post', ({ data }) => !data.draft)).sort(
+const allPosts = (await getPublishedPosts()).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 

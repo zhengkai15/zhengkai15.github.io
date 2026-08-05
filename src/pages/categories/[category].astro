@@ -1,17 +1,17 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../../lib/posts';
 import ListLayout from '../../layouts/ListLayout.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('post', ({ data }) => !data.draft);
+  const allPosts = await getPublishedPosts();
   const categories = new Set(allPosts.map((p) => p.data.categories));
   return Array.from(categories).map((category) => ({ params: { category } }));
 }
 
 const { category } = Astro.props;
-const posts = (await getCollection('post', ({ data }) => !data.draft && data.categories === category)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const posts = (await getPublishedPosts())
+  .filter((p) => p.data.categories === category)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <ListLayout

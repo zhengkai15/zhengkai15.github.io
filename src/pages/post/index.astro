@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../../lib/posts';
 import ListLayout from '../../layouts/ListLayout.astro';
 
-const allPosts = (await getCollection('post', ({ data }) => !data.draft)).sort(
+const allPosts = (await getPublishedPosts()).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 

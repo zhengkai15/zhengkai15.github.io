@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../../lib/posts';
 
-const allPosts = await getCollection('post', ({ data }) => !data.draft);
+const allPosts = await getPublishedPosts();
 
 // 统计每个分类的文章数
 const categoryCounts = new Map<string, number>();
