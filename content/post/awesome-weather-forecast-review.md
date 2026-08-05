@@ -3,7 +3,7 @@ title: "数据驱动天气预报的演进"
 date: 2024-01-17T20:40:45+08:00
 lastmod: 2026-08-05T00:00:00+08:00
 draft: false
-keywords: ["weather forecasting", "foundation model", "Pangu-Weather", "GraphCast",  "diffusion", "nowcasting"]
+keywords: ["weather forecasting", "foundation model", "Pangu-Weather", "GraphCast", "diffusion", "nowcasting"]
 description: "以从业者视角梳理数据驱动天气预报这几年的演进：Pangu/GraphCast 怎么把中期预报做起来的，级联学习怎么把时效推到 15 天，扩散模型又怎么杀进短临预报。"
 tags: ["AI4Science", "Weather-Forecast", "Foundation-Model", "Diffusion"]
 categories: ["AI4Science"]
