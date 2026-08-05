@@ -4,72 +4,60 @@
 
 内容以 **AI for Science** 为主线，覆盖气象大模型、多模态生成、LLM 数据工程与工程实践。
 
+> **当前状态**：线上站点（`master` 分支）仍运行 Hugo + PaperMod。本仓库的 Astro 重构版本在 **`migrate/astro` 分支**开发测试中，**未上线**。下面的文档描述的是 Astro 版。
+
 ## 技术栈
 
 | 组件 | 说明 |
 |---|---|
-| [Hugo](https://gohugo.io) | 静态站点生成器（extended 版，v0.122+） |
-| [PaperMod](https://github.com/adityatelange/hugo-PaperMod) | 主题（v8.0，直接内置在 `themes/papermod/`） |
-| GitHub Pages + Actions | 推送 `master` 自动构建部署 |
-
-零 Node/Python 依赖，构建仅需一个 Hugo 二进制。
+| [Astro](https://astro.build) | 静态站点生成器（v7，Islands 架构，默认零 JS） |
+| [Tailwind CSS](https://tailwindcss.com) | 样式（v4，`@tailwindcss/vite` 集成） |
+| [astro-expressive-code](https://expressive-code.com) | 代码高亮 + 复制按钮 + 行号 |
+| [Pagefind](https://pagefind.app) | 客户端静态搜索 |
+| @astrojs/mdx / @astrojs/rss / @astrojs/sitemap | MDX / RSS / 站点地图 |
+| pnpm + GitHub Pages + Actions | 包管理、自动构建部署 |
 
 ## 快速开始
 
-### 1. 安装 Hugo
-
-> 需要 **extended** 版本（站点构建依赖 SCSS/Sass 处理，PaperMod 用 `hugo.IsExtended` 判断）。
-
-macOS：
+> 需要 Node.js 20+ 和 pnpm。pnpm 通过 `npm i -g pnpm` 或 corepack 安装。
 
 ```bash
-brew install hugo   # 默认即 extended
-```
+# 1. 安装依赖（registry 已配置 npmmirror / 清华镜像）
+pnpm install
 
-Linux / Windows：从 <https://github.com/gohugoio/hugo/releases> 下载 `hugo_extended_*` 版本。
+# 2. 本地预览（http://localhost:4321，改文件自动刷新）
+pnpm dev        # 草稿（draft: true）文章也会显示
 
-验证：
-
-```bash
-hugo version   # 应包含 "extended"
-```
-
-### 2. 克隆并启动本地预览
-
-```bash
-git clone git@github.com:zhengkai15/zhengkai15.github.io.git
-cd zhengkai15.github.io
-
-# 本地预览（http://localhost:1313，改文件自动刷新）
-hugo server -D   # -D 同时渲染 draft 文章，便于预览未发布内容
-```
-
-### 3. 构建静态文件
-
-```bash
-hugo --gc --minify --baseURL "https://zhengkai15.github.io/"
-# 产物输出到 public/（已被 .gitignore 忽略，无需提交）
+# 3. 构建静态文件
+pnpm build      # 产物输出到 dist/，草稿自动排除
+pnpm run search # 生成 Pagefind 搜索索引（构建后执行）
 ```
 
 ## 写一篇文章
 
 ```bash
-hugo new post/my-first-post.md
+# 复制模板（模板在仓库根，不要直接编辑）
+cp post-template.md src/content/post/我的文章.md
 ```
 
-会自动套用 `archetypes/default.md` 模板。每篇文章的 frontmatter 必须包含：
+文件名即 URL slug（小写 + 连字符），例如 `src/content/post/diffusion-notes.md` → `/post/diffusion-notes/`。
+
+### frontmatter 必填字段
 
 ```yaml
 ---
 title: "文章标题"
 date: 2026-08-05T00:00:00+08:00
-draft: true                # true = 草稿不发布；发布时改 false
-description: "1-2 句摘要，会显示在列表页和搜索引擎"
+lastmod: 2026-08-05T00:00:00+08:00
+draft: true                # true = 草稿：本地可见、构建不发布；发布时改 false
+description: "1-2 句摘要，显示在列表页和搜索引擎"
 tags: ["Diffusion", "LoRA"]      # 细粒度技术词，可多个
 categories: ["AI4Science"]       # 五选一，见下
 author: "kaizheng"
 ---
 ```
+
+> **防呆**：frontmatter 由 zod schema 强校验——分类写错、缺 description、date 格式不对，构建会直接报错，不会带病上线。
 
 **分类规范（五类，categories 必须五选一）：**
 
@@ -81,63 +69,75 @@ author: "kaizheng"
 | `Engineering` | 推理部署、分布式训练、踩坑记录 | 《vLLM 部署踩坑》 |
 | `Paper-Notes` | 论文精读 | 《Flow Matching 精读》 |
 
-**写作建议：**
-- 深度优先：一篇能讲透一个问题的文章，胜过三篇泛泛而谈
-- 中文为主，精读笔记可用英文
-- 用真实经历和踩坑说话，避免 AI 味浓的排比和空洞总结
+### 写作注意
+
+- **图片**：放到 `src/assets/`，正文用相对路径引用 `![](../../assets/图片.png)`，Astro 会自动压缩 + 生成 webp
+- **代码块**：自动带复制按钮、行号、语言标签，无需额外配置
+- **交互组件**（如 Diffusion 采样 demo）：文件后缀用 `.mdx`，可直接在文内写 React/Vue 组件（`client:load`）
+- **写作建议**：深度优先——一篇讲透一个问题，胜过三篇泛泛而谈；用真实经历和踩坑说话
+
+### 发布流程
+
+```bash
+pnpm dev          # 本地预览，确认无误
+# 把 frontmatter 的 draft 改成 false
+git add .
+git commit -m "post: 新增 XXX"
+git push origin migrate/astro
+```
 
 ## 部署
 
-推送 `master` 分支即自动触发 GitHub Actions（`.github/workflows/hugo.yml`）：
+推送 `master` 分支自动触发 GitHub Actions（`.github/workflows/astro.yml`）：
 
-1. 安装 Hugo extended
-2. `hugo --gc --minify` 构建到 `public/`
-3. `actions/upload-pages-artifact@v3` 上传产物
-4. `actions/deploy-pages@v4` 部署到 GitHub Pages
+1. 安装 pnpm + Node 22
+2. `pnpm install --frozen-lockfile`
+3. `pnpm build` 构建到 `dist/`
+4. `pnpm run search` 生成 Pagefind 搜索索引
+5. `actions/upload-pages-artifact@v3` 上传产物
+6. `actions/deploy-pages@v4` 部署到 GitHub Pages
 
-```bash
-git add .
-git commit -m "post: 新增 XXX"
-git push origin master
-```
-
-> 注意：**不要手动提交 `public/`**。它由 CI 构建生成，已被 `.gitignore` 忽略。站点源码在 `content/`。
+> 注意：CI 只监听 `master` 分支。当前 Astro 版在 `migrate/astro` 分支开发，推送该分支**不会**触发部署。上线前需将 `migrate/astro` 合入 `master` 并删除 Hugo 版文件。
 
 ## 目录结构
 
 ```
 .
-├── archetypes/          # 文章模板（hugo new 时套用）
-├── content/
-│   ├── about.md         # 关于页
-│   └── post/            # 博客文章（markdown）
-├── themes/papermod/     # PaperMod 主题（v8.0，直接 vendored）
-├── config.toml          # 站点配置（标题、菜单、Profile 模式、社交链接）
-├── .github/workflows/   # CI：自动构建部署
-└── public/              # 构建产物（忽略，勿提交）
+├── src/
+│   ├── content/
+│   │   └── post/          # 博客文章（markdown / mdx）
+│   ├── content.config.ts  # Content Collections schema（分类 enum + zod 校验）
+│   ├── layouts/           # BaseLayout / PostLayout / ListLayout / PageLayout
+│   ├── components/        # 页面组件
+│   ├── pages/             # 路由：首页 / post / categories / tags / about / rss / 404
+│   ├── lib/posts.ts       # getPublishedPosts()：dev 含草稿，build 只发布
+│   ├── assets/            # 图片资源（构建时优化）
+│   └── styles/global.css  # 全局样式 + 暗色主题变量
+├── public/                # 静态资源（favicon / robots.txt）
+├── astro.config.mjs       # Astro 配置
+├── pnpm-workspace.yaml    # pnpm 11 配置（allowBuilds / verifyDepsBeforeRun）
+├── post-template.md       # 新文章模板（复制到 src/content/post/ 使用）
+├── .github/workflows/astro.yml  # CI：自动构建部署
+└── dist/                  # 构建产物（gitignore，勿提交）
 ```
-
-## 站点配置速查（config.toml）
-
-- 首页 Profile 模式（头像/副标题/按钮）：`[params.profileMode]`
-- 社交链接：`[[params.socialIcons]]`（github / email / twitter …）
-- 导航菜单：`[[menu.main]]`
-- 亮色/暗色自动切换：`defaultTheme = "auto"`
 
 ## 常见问题
 
 **Q: 改了文章但线上没更新？**
-确认推的是 `master` 分支，然后看 GitHub → Actions 页面是否有绿色对勾。若红色，点进去看失败日志。
+确认推的是 `master` 分支（CI 只监听 master），然后看 GitHub → Actions 页面是否有绿色对勾。Astro 版上线前请先合入 master。
 
 **Q: 本地预览看不到草稿文章？**
-`hugo server` 默认不渲染 `draft: true` 的文章，加 `-D` 参数。
+`pnpm dev` 默认会显示 `draft: true` 的文章（`src/lib/posts.ts` 里 dev 模式返回全部）。构建 `pnpm build` 时草稿自动排除。
 
-**Q: 换主题后文章格式乱了？**
-PaperMod 使用标准 markdown 链接语法 `[text](url)`。若从 Even 等主题迁移，注意旧主题特有的 `[[text](url)]` wiki 语法不会被渲染。
+**Q: 构建报 `InvalidOption` / schema 错误？**
+frontmatter 的 `categories` 不在五类枚举里，或必填字段缺失。检查 `src/content.config.ts` 里的 schema 定义。
+
+**Q: 搜索不可用？**
+搜索索引是构建后生成的（`pnpm run search`）。本地 `pnpm dev` 下搜索索引未生成，属正常现象；`pnpm build` + `pnpm run search` 后可用。
 
 **Q: 想改站点标题/头像/简介？**
-全部在 `config.toml` 里，改完推 master 即可。
+首页 Profile 在 `src/pages/index.astro`，导航/主题在 `src/layouts/BaseLayout.astro`，改完提交即可。
 
 ## License
 
-© Kai Zheng. 文章内容与站点源码保留所有权利；主题 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 遵循其自身 MIT License。
+© Kai Zheng. 文章内容与站点源码保留所有权利。
